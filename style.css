@@ -9,6 +9,81 @@ html{
     scroll-behavior: smooth; /* Permite desplazarme a la seccion que hago clic */
 }
 
+/*------- SECCION HEADER -------*/
+.contenedor-header{
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo a{
+    font-family: 'Righteous';
+    font-size: 36px;
+    color: #1CB698;
+    text-decoration: none;
+}
+.contenedor-header header .logo img{
+    width: 30px;
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none; /* quita subrayado */
+}
+.contenedor-header header nav ul li a:hover{
+    color: #1CB698;
+}
+.nav-responsive{ /* Menu hamburguesa */
+    background-color: #1CB698;
+    color:#fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/*------- SECCION RESPONSIVE HEADER -------*/
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+
 /* ------- SECCION INICIO ------- */
 .inicio{
     background: url(img/fondo.jpg);
@@ -106,6 +181,10 @@ html{
 .sobremi .fila .col ul li{
     margin: 12px 0;
 }
+.sobremi .fila .col ul li :hover{
+    transition: 0.5s;
+    color: #1CB698;
+}
 .sobremi .fila .col ul li strong{
     display: inline-block;
     color: #1CB698;
@@ -116,6 +195,9 @@ html{
     padding: 3px;
     font-weight: bold;
     border-radius: 5px;
+}
+.sobremi .fila .col ul li span:hover{
+    color: white;
 }
 .sobremi .fila .col .contenedor-intereses{
     display: flex;
@@ -236,7 +318,7 @@ html{
 }
 @keyframes javascript {
     0%{width: 0%;}
-    100%{width: 80%;}
+    100%{width: 100%;}
 }
 .skills .skill .html{
     width: 0%;
@@ -244,7 +326,7 @@ html{
 }
 @keyframes html {
     0%{width: 0%;}
-    100%{width: 90%;}
+    100%{width: 100%;}
 }
 .skills .skill .css{
     width: 0%;
@@ -252,7 +334,7 @@ html{
 }
 @keyframes css {
     0%{width: 0%;}
-    100%{width: 90%;}
+    100%{width: 100%;}
 }
 .skills .skill .react{
     width: 0%;
@@ -260,7 +342,7 @@ html{
 }
 @keyframes react {
     0%{width: 0%;}
-    100%{width: 50%;}
+    100%{width: 100%;}
 }
 .skills .skill .node{
     width: 0%;
@@ -268,7 +350,7 @@ html{
 }
 @keyframes node {
     0%{width: 0%;}
-    100%{width: 70%;}
+    100%{width: 100%;}
 }
 .skills .skill .comunicacion{
     width: 0%;
@@ -432,6 +514,7 @@ html{
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
+    margin-bottom: 15px;
 }
 .portfolio .galeria{
     display: flex;
@@ -556,6 +639,10 @@ html{
 .contacto .col .info ul li{
     margin-bottom: 20px;
 }
+.contacto .col .info ul li a:hover{
+    transition: 0.5s;
+    color: #1CB698;
+}
 .contacto .col .info ul li i{
     color: #1CB698;
     display: inline-block;
@@ -609,4 +696,28 @@ html{
     .contacto .fila .col{
         width: 100%;
     }
+}
+
+/*------- SECCION FOOTER -------*/
+footer{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #1CB698;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
 }
