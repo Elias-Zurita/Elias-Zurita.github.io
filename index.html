@@ -45,6 +45,7 @@
             <div class="contenido-banner">
                 <div class="contenedor-img">
                     <img src="img/avatar.jpg" alt="">
+                    <span class="circle-spin"></span>
                 </div>
                 <h1>ELIAS ZURITA</h1>
                 <h2>Desarrollador Web Full Stack</h2>
@@ -56,6 +57,7 @@
                 </div>
             </div>
         </section>
+
         <!-- SECCION SOBRE MI -->
         <section id="sobremi" class="sobremi">
             <div class="contenido-seccion">
@@ -390,8 +392,9 @@
                 <div class="fila">
                     <!-- Formulario -->
                         <div class="col">
-                            <form action="https://api.web3forms.com/submit" method="POST">
+                            <form action="https://api.web3forms.com/submit" method="POST" id="miFormulario">
                                 <input type="hidden" name="access_key" value="a62d97c9-54da-494c-a208-e9544ce3b723"> <!-- el value es la key que me envio por mail la pagina, eso vincula los msj a mi casilla de gmail -->
+                                <input type="hidden" name="redirect" value="https://elias-zurita.github.io/">
                                 <input type="text" placeholder="Nombre" name="nombre" minlength="4" maxlength="40" required >
                                 <input type="tel" placeholder="Teléfono" name="telefono" minlength="8" maxlength="20" required >
                                 <input type="email" placeholder="E-mail" name="email" required>
@@ -437,6 +440,8 @@
         </footer>
 
         <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="sweetalert2.js"></script>
     </body>
 
 </html>

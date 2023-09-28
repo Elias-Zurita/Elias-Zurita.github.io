@@ -101,18 +101,84 @@ html{
     text-align: center;
     border-radius: 40px;
 }
-.inicio .contenido-banner img{
-    margin-top: 40px;
-    border: 10px solid #1CB698;
-    display: block;
-    width: 80%;
+.contenedor-img{
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
     margin: auto;
-    border-radius: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.contenedor-img img{
+    border: 3px solid crimson;
+    display: block;
+    width: 90%;  /* Al ser 10% mas chico que la caja de imagen separa los circulos que giran */
+    border-radius: 50%;
+}
+.circle-spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: 3px solid #1e2326;  /* El borde de arriba y abajo son del color del fondo (para que simule no aparecer) */
+    border-bottom: 3px solid #1e2326;
+    border-left: 3px solid crimson;
+    border-right: 3px solid crimson;
+    animation: girar 5s linear infinite;
+}
+@keyframes girar {
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 .inicio .contenido-banner h1{
-    margin-top: 40px;
+    position: relative;
+    margin-top: 10px;
     font-size: 42px;
     font-family: 'Righteous';
+    color: transparent;
+    -webkit-text-stroke: .1px white;  /* Color del borde de las letras  */
+    background-image: linear-gradient(crimson, crimson);  /* Color con el que va a rellenar las letras */
+    background-repeat: no-repeat;  /* Borra el relleno cuando vuelve hacia atras */
+    -webkit-background-clip: text;  /* rellena solo el texto y no la caja */
+    background-position: 0 0;
+    animation: rellenadoTexto 5s linear infinite;
+}
+.inicio .contenido-banner h1::before{ /* Barrita de escritura */
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 0;
+    height: 75%;
+    border-right: 2px white solid; 
+    animation: barrido 5s linear infinite, titila 0.9s infinite;
+}
+@keyframes rellenadoTexto{
+    0%,10%,100%{
+        background-position: -280px 0;  /* Desde donde arranca el efecto de relleno */
+    }
+    65%, 85%{  /* Demora el reinicio de autoescritura */
+        background-position: 0 0;
+    }
+}
+@keyframes barrido {
+    0%,10%,100%{
+       width: 0;
+    }
+    65%, 85%{
+        width: 100%;
+    }
+}
+@keyframes titila{
+    50%{
+        border-right: transparent; /* efecto para que titile la linea de barrido */
+    }
 }
 .inicio .contenido-banner h2{
     font-size: 15px;
