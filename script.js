@@ -1,20 +1,3 @@
-let menuVisible = false;
-//Función que oculta o muestra el menu
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList ="";
-        menuVisible = false;
-    }else{
-        document.getElementById("nav").classList ="responsive";
-        menuVisible = true;
-    }
-}
-
-function seleccionar(){
-    //oculto el menu una vez que selecciono una opcion
-    document.getElementById("nav").classList = "";
-    menuVisible = false;
-}
 //Funcion que aplica las animaciones de las habilidades
 function efectoHabilidades(){
     var skills = document.getElementById("skills");
@@ -34,15 +17,12 @@ function efectoHabilidades(){
     }
 }
 
-//detecto el scrolling para aplicar la animacion de la barra de habilidades
-window.onscroll = function(){
-    efectoHabilidades();
-} 
-
-// Aparicion de secciones con el scroll
 let section = document.querySelectorAll('section');
 
-window.onscroll = () => {
+// Animaciones con el scrolling
+window.onscroll = function(){
+
+    // Aparicion de secciones con el scroll
     section.forEach(sec =>{
         let top = window.scrollY;
         let offset = sec.offsetTop - 100;
@@ -53,7 +33,8 @@ window.onscroll = () => {
             sec.classList.add('show-animate');
         }  // con el else vuelven a aparecer cuando volves a pasar con el scroll
         else{
-            sec.classList.remove('show-animate')
+            sec.classList.remove('show-animate');
         }
     })
-}
+    efectoHabilidades(); // Animacion de habilidades
+} 

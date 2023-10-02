@@ -85,6 +85,10 @@ html{
 }
 
 /* ------- ANIMACION DE APARICION CON SCROLL ------- */
+.show-animate .animate{
+    animation: showRight 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));  /* En el html aplicando style="--i:X" la X determina el orden de aparicion */
+}
 .animate{
     position: absolute;
     top: 0;
@@ -94,10 +98,6 @@ html{
     z-index: 98;
     background:  red;
 } 
-.show-animate .animate{
-    animation: showRight 1s ease forwards;
-    animation-delay: calc(.3s * var(--i));  /* En el html aplicando style="--i:X" la X determina el orden de aparicion */
-}
 @keyframes showRight{
     100%{
         width: 0;
@@ -106,13 +106,13 @@ html{
 
 /* ------- SECCION INICIO ------- */
 .inicio{
-    display: inline-block;
     background: url(img/fondo.jpg);
     background-size: cover;
     height: 100vh;
     color: #fff;
     display: flex;
     align-items: center;
+    
 }
 .inicio .contenido-banner{
     padding: 20px;
