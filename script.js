@@ -38,3 +38,22 @@ function efectoHabilidades(){
 window.onscroll = function(){
     efectoHabilidades();
 } 
+
+// Aparicion de secciones con el scroll
+let section = document.querySelectorAll('section');
+
+window.onscroll = () => {
+    section.forEach(sec =>{
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 100;
+        let height = sec.offsetHeight;
+
+        if(top >= offset && top < offset + height){
+            //secciones que aparecen con el scroll
+            sec.classList.add('show-animate');
+        }  // con el else vuelven a aparecer cuando volves a pasar con el scroll
+        else{
+            sec.classList.remove('show-animate')
+        }
+    })
+}

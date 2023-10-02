@@ -84,8 +84,29 @@ html{
     }
 }
 
+/* ------- ANIMACION DE APARICION CON SCROLL ------- */
+.animate{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    background:  red;
+} 
+.show-animate .animate{
+    animation: showRight 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));  /* En el html aplicando style="--i:X" la X determina el orden de aparicion */
+}
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+
 /* ------- SECCION INICIO ------- */
 .inicio{
+    display: inline-block;
     background: url(img/fondo.jpg);
     background-size: cover;
     height: 100vh;
@@ -100,6 +121,7 @@ html{
     margin: auto;
     text-align: center;
     border-radius: 40px;
+    position: relative;
 }
 .contenedor-img{
     position: relative;
@@ -137,19 +159,28 @@ html{
     }
 }
 .inicio .contenido-banner h1{
-    position: relative;
     margin-top: 10px;
     font-size: 42px;
     font-family: 'Righteous';
+}
+.inicio .contenido-banner h2{
+    font-size: 17px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+    position: relative;
+    width: 310px;
     color: transparent;
-    -webkit-text-stroke: .1px white;  /* Color del borde de las letras  */
     background-image: linear-gradient(crimson, crimson);  /* Color con el que va a rellenar las letras */
     background-repeat: no-repeat;  /* Borra el relleno cuando vuelve hacia atras */
     -webkit-background-clip: text;  /* rellena solo el texto y no la caja */
+    background-clip: text;
     background-position: 0 0;
     animation: rellenadoTexto 5s linear infinite;
 }
-.inicio .contenido-banner h1::before{ /* Barrita de escritura */
+.inicio .contenido-banner h2::before{ /* Barrita de escritura */
     content: '';
     position: absolute;
     top: 3px;
@@ -161,7 +192,7 @@ html{
 }
 @keyframes rellenadoTexto{
     0%,10%,100%{
-        background-position: -280px 0;  /* Desde donde arranca el efecto de relleno */
+        background-position: -310px 0;  /* Desde donde arranca el efecto de relleno */
     }
     65%, 85%{  /* Demora el reinicio de autoescritura */
         background-position: 0 0;
@@ -179,10 +210,6 @@ html{
     50%{
         border-right: transparent; /* efecto para que titile la linea de barrido */
     }
-}
-.inicio .contenido-banner h2{
-    font-size: 15px;
-    font-weight: normal;
 }
 .inicio .contenido-banner .redes a{
     color: #fff;
@@ -219,6 +246,7 @@ html{
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
+    position: relative; /* para efecto de aparicion con scroll */
 }
 .sobremi .contenido-seccion p{
     font: 18px;
