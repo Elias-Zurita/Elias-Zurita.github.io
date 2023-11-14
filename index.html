@@ -5,40 +5,74 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One"> <!-- link para usar Paytone One como tipo de fuente  -->
+        
+        <!-- Vinculacion con Bootstrap  y w3schools -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+        <!-- vinculacion del HTML con style.css -->
+        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="styleNuevo.css"> 
+
+         <!-- Icono y titulo en pestaña del navegador -->
+        <link rel="shortcut icon" href="img/icono.png">
         <title>Portfolio EZ</title>
-        
-        <link rel="shortcut icon" href="img/icono.png"> <!-- Etiqueta para mostrar el icono en la pestaña del navegador -->
-        <link rel="stylesheet" href="style.css"> <!-- vinculacion del HTML con style.css -->
-
-        <!-- Javascript frontend -->
-        <script defer src="script.js"></script>
     </head>
-    
-    <body>
-        
-        <div class="contenedor-header">
-            <header class="">
-                <div class="logo">
-                    <a href="#">ELIAS <img src="img/icono.png"</a>
-                </div>
-                <nav id="nav">
-                    <ul>
-                        <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
-                        <li><a href="#sobremi"onclick="seleccionar()">SOBRE MI</a></li>
-                        <li><a href="#skills"onclick="seleccionar()">SKILLS</a></li>
-                        <li><a href="#curriculum"onclick="seleccionar()">CURRICULUM</a></li>
-                        <li><a href="#portfolio"onclick="seleccionar()">PORTFOLIO</a></li>
-                        <li><a href="#contacto"onclick="seleccionar()">CONTACTO</a></li>
-                    </ul>
-                </nav>
-                <div class="nav-responsive"onclick="mostrarOcultarMenu()">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-            </header>
-        </div>
 
+    <header class="fixed-top">
+
+        <!-- Boton de whats app para todas las vistas -->
+        <a href="https://wa.me/5491165599444?text=" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i></a>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a href="#"><div class="logoHeader">
+                    <img src="img/icono.png" alt="">
+                </div></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- Burger Button WH3S -->
+                    <div class="container" onclick="myFunction(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="#inicio" class="nav-link">INICIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#sobremi" class="nav-link">SOBRE MÍ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#skills" class="nav-link">SKILLS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#curriculum" class="nav-link">CURRICULUM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contacto" class="nav-link">CONTACTO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+    </header>
+
+    <body>
         
         <!-- SECCION INICIO -->
         <section id="inicio" class="inicio show-animate">
@@ -55,15 +89,15 @@
                     <a href="https://wa.me/5491165599444?text=" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                     <a href="mailto:eliass.zurita@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
                 </div>
-                <span class="animate" style="--i:1"></span>
+                <span class="animate" style="--i:2"></span>
             </div>
         </section>
 
         <!-- SECCION SOBRE MI -->
-        <section id="sobremi" class="sobremi show-animate">
+        <section id="sobremi" class="sobremi">
             <div class="contenido-seccion">
-                <h2>Sobre Mí<span class="animate" style="--i:3"></span></h2>
-                <p><span>Hola, soy Elias Zurita.</span> Soy una persona entusiasta y perseverante. Busco desafíos que me permitan sumarle valor a las empresas y perfeccionar mis conocimientos en el ámbito del desarrollo web.</p>
+                <h2>Sobre Mí</h2>
+                <p><strong>Hola, soy Elias Zurita.</strong>Soy una persona entusiasta y perseverante. Busco desafíos que me permitan sumarle valor a las empresas y perfeccionar mis conocimientos en el ámbito del desarrollo web.</p>
                 <div class="fila">
                     <!-- datos personales -->
                     <div class="col">
@@ -142,11 +176,12 @@
                     </button>
                 </a>
             </div>
+            
         </section>
         <!-- SECCION SKILLS -->
         <section id="skills" class="skills">
             <div class="contenido-seccion">
-                <h2>Skills</h2>
+                <h2>Skills></h2>
                 <div class="fila">
                     <!-- Technical Skill -->
                     <div class="col">
