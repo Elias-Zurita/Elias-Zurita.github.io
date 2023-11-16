@@ -13,11 +13,26 @@ a{
 }
 body{
     font-family: "Poppins", sans-serif;
+    color: white;
+    background: black;
 }
 header{
-    background: crimson;
+    background: #1f1f1f;
     font-family: "Poppins", sans-serif;
 }
+h1{
+    font-family: 'Righteous', sans-serif;
+    font-size: 50px;
+}
+h2{
+    font-family: 'Righteous', sans-serif;
+    font-size: 25px;
+}
+h3{
+    font-family: 'Righteous', sans-serif;
+    font-size: 30px;
+}
+
 /* Boton WhatsApp */
 .btn-wsp{
     position:fixed;
@@ -39,7 +54,7 @@ header{
 }
 @keyframes ripple {
     0% {
-        box-shadow: 0 0 0 0 rgba(195, 193, 193, 0.2),
+        box-shadow: 0 0 0 0 #c3c1c133,
                   0 0 0 20px rgba(195, 193, 193, 0.2);
     }
     100% {
@@ -169,8 +184,283 @@ header{
         }
     }
   }
+
+  #particles-js {
+    position: absolute;
+    top: 65;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+}
+#inicio{
+    margin-top: 80px;
+    height: 90vh;
+    border: #25D366 solid 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15%;    
+}
 .presentacion{
     display:flex;
+    flex-direction: column;
+    border: violet solid 2px;
+    width: 550px;
+    font-family: 'Righteous', sans-serif;
+}
+.colorAlternativo{
+    color: crimson;
+    font-family: 'Righteous', sans-serif;
+}
+.presentacion h2{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-style: italic;
+    position: relative;
+    width: 300px;
+    color: transparent;
+    background-image: linear-gradient(white, white);  /* Color con el que va a rellenar las letras */
+    background-repeat: no-repeat;  /* Borra el relleno cuando vuelve hacia atras */
+    -webkit-background-clip: text;  /* rellena solo el texto y no la caja */
+    background-clip: text;
+    background-position: 0 0;
+    animation: rellenadoTexto 5s linear infinite;
+}
+.presentacion h2::before{ /* Barrita de escritura */
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 0;
+    height: 75%;
+    border-right: 2px white solid; 
+    animation: barrido 5s linear infinite, titila 0.9s infinite;
+}
+@keyframes rellenadoTexto{
+    0%,10%,100%{
+        background-position: -300px 0;  /* Desde donde arranca el efecto de relleno */
+    }
+    65%, 85%{  /* Demora el reinicio de autoescritura */
+        background-position: 0 0;
+    }
+}
+@keyframes barrido {
+    0%,10%,100%{
+       width: 0;
+    }
+    65%, 85%{
+        width: 100%;
+    }
+}
+@keyframes titila{
+    50%{
+        border-right: transparent; /* efecto para que titile la linea de barrido */
+    }
+}
+.redesInicio{
+    display: flex;
+}
+.redesInicio a{
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 5px;
+    font-size: 20px;
+    transition: .3s ease-in-out;
+    text-align: center;
+    z-index: 2000;
+}
+.redesInicio a:hover{
+    background: white;
+    color: crimson;
+}
+.foto{
+    z-index: 1000;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+.foto img{
+    width: 400px;
+}
+#sobremi{
+    margin: 80px 0;
+    text-align: center;
+}
+.padreSobreMi{
+    margin-top: 30px;
+    display: flex;
+    justify-content:center;
+    border: #25D366 solid 3px;
+    align-items: center;
+}
+.cajaSobreMi{
+    border: red solid 2px;
+    width: 40%;
+    text-align: start;
+    border: blue solid 2px;
+    margin-right: 50px;
+}
+.interesesPadre{
+    border: goldenrod solid 2px;
+    width: 40%;
+    margin-bottom: auto;
+    
+}
+.cajasIntereses{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content:center;
+    align-items: center;
+    border: #25D366 solid 2px;
+    margin: 20px auto
+}
+.interes{
+    width: 100px;
+    height: 100px;
+    background: white;
     color: black;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    transition: .3s ease-in-out;
+    border-radius: 10px;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+}
+.interes i{
+    font-size: 30px;
+}
+.interes:hover{
+    background-color: crimson;
+    color: white;
+    transform: scale(1.08); 
+}
+.cajaCv button{
+    margin-top: 30px;
+    width:250px;
+    font-size:20px;
+    text-transform: uppercase;
+    height: 50px;
+    transition: .3s ease-in-out;
+    background-color: transparent;
+    border: white solid 3px;
+    color: white;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 2px;
+}
+.cajaCv button:hover{
+    background-color: crimson;
+    color: #050801;
+    border: none;
+    box-shadow: 0 0 5px crimson,
+                0 0 25px crimson,
+                0 0 50px crimson,
+                0 0 200px crimson;
+}
 
+#skills{
+    margin: 80px 0;
+    text-align: center;
+}
+.padreSkills{
+    margin-top: 30px;
+    display: flex;
+    justify-content:center;
+    border: #25D366 solid 3px;
+    align-items: center;
+    flex-direction: column;
+}
+.tab-content{
+    border: red solid 3px;
+    width: 70%;
+}
+.cajaHerramientas{
+    display: flex;
+    flex-wrap: wrap;
+    border: yellow solid 2px;
+    width: 100%;
+    margin-top: 40px;
+}
+.herramienta{
+    border: blue solid 2px;
+    width: 90px;
+    height: 90px;
+    font-size: 60px;
+    margin: 0 15px;
+    color: white;
+    transition: .3s ease-in-out;
+}
+.herramienta:hover{
+    transform: scale(1.2)
+}
+.herramienta:hover .fa-html5{
+    color: #e34c26;
+}
+.herramienta:hover .fa-css3-alt{
+    color: #264de4;
+}
+.herramienta:hover .fa-js{
+    color: #F0DB4F;
+}
+.herramienta:hover .fa-react{
+    color: #61dbfb;
+}
+.herramienta:hover .fa-node{
+    color: #68a063;
+}
+.herramienta:hover .fa-database{
+    color: crimson
+}
+.herramienta:hover .fa-bootstrap{
+    color: #563d7c
+}
+.habilidad{
+    width: 1000px;
+    border: #0d6efd solid 2px;
+}
+.habilidad h2{
+    text-align: start
+}
+.barra-skill{
+    height: 15px;
+    width: 40%;
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 30px;
+}
+.progreso{
+    background-color: #1CB698;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+}
+.barra-skill span{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #1CB698;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+/* Estas clases se agregaran dinamicamente mediante javascript */
+.javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+@keyframes javascript {
+    0%{width: 0%;}
+    100%{width: 100%;}
 }
