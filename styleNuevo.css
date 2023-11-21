@@ -5,6 +5,15 @@
     margin: 0;
     padding: 0;
 }
+/* Scroll personalizado */
+body::-webkit-scrollbar{
+    width: 9px;
+    background: black;
+}
+body::-webkit-scrollbar-thumb{
+    background:var(--color-primario);
+    border-radius: 5px;
+}
 html{
     scroll-behavior: smooth; /* Permite desplazarme a la seccion que hago clic */
 }
@@ -111,7 +120,7 @@ header{
     position: relative;
 }
 .nav-link:hover{
-    color: crimson;
+    color: var(--color-primario);
     font-style: italic;
 }
 .subrayado::after{  /* raya del subtitulo */
@@ -216,15 +225,20 @@ header{
     border: #25D366 solid 3px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 15%;    
+    justify-content: center;
+}
+.inicioPadre{
+    display: flex;
+    border: blue solid 2px;
+    width: 1300px;
 }
 .presentacion{
     display:flex;
     flex-direction: column;
     border: violet solid 2px;
-    width: 550px;
+    width: 50%;
     font-family: 'Righteous', sans-serif;
+    justify-content: center;
 }
 .colorAlternativo{
     color: var(--color-primario);
@@ -296,12 +310,40 @@ header{
     background-color: var(--color-primario);
     border: var(--color-primario);
 }
-.foto{
-    z-index: 1000;
-    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+.fotoAvatar{
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    justify-content:center;
+    align-items:center;
 }
-.foto img{
-    width: 400px;
+.fotoAvatar img{
+    border: 3px solid crimson;
+    display: block;
+    width: 90%;  /* Al ser 10% mas chico que la caja de imagen separa los circulos que giran */
+    border-radius: 50%;
+}
+.circle-spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: 3px solid black;  /* El borde de arriba y abajo son del color del fondo (para que simule no aparecer) */
+    border-bottom: 3px solid black;
+    border-left: 3px solid crimson;
+    border-right: 3px solid crimson;
+    animation: girar 5s linear infinite;
+}
+@keyframes girar {
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
 /*================== SOBRE MI ==================*/
@@ -572,6 +614,10 @@ header{
     text-align: center;
     padding: 70px 0px 30px 0px;
 }
+#experiencia{
+    text-align: center;
+    padding: 70px 0px 30px 0px;
+}
 .padreInstitutos{
     display: flex;
     flex-direction: column;
@@ -738,18 +784,18 @@ header{
 }
 
 /*================== FOOTER ==================*/
+/*------- SECCION FOOTER -------*/
 footer{
-    margin-top: 150px;
     background-color: #252A2E;
     color: #fff;
     padding: 40px 0 8px 0;
     text-align: center;
     position: relative;
     width: 100%;
+    margin-top: 80px;
 }
 footer .redes{
-    margin-bottom: 30px;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 footer .redes a{
     color: #fff;
@@ -775,16 +821,26 @@ footer .arriba{
     color: #fff;
     position: absolute;
     left: 50%;
+    transform: translateX(-50%);
     top: -25px;
     border-radius: 50%;
     line-height: 50px;
     font-size: 18px;
-    transition: .3s ease-in-out;
 }
-footer .arriba:hover{
+.arriba:hover{
     background-color: white;
-    color: black;
-    transform: translateY(-10px);
+    color: var(--color-primario);
+}
+.arriba i {
+    transition: transform 0.5s ease; /* Transición para suavizar el giro */
+}
+.arriba:hover i {
+    transform: rotateY(360deg); /* Gira 360 grados al hacer hover */
+}
+@media(max-width:1400px){
+    .inicioPadre{
+        width: 90%;
+    }
 }
 @media (max-width:1300px){
     .tab-content{
@@ -797,6 +853,21 @@ footer .arriba:hover{
     }
 }
 @media (max-width:992px){
+    .inicioPadre{
+        flex-direction: column-reverse; /* Invierto el orden de aparicion (avatar nombre) */
+        align-items: center;
+        height:90%;
+    }
+    .presentacion{
+        width: 90%;
+    }
+    .redesInicio{
+        justify-content: center;
+    }
+    #inicio{
+        margin-top: 50px;
+        height: 94vh;
+    }
     .padreSobreMi{
         flex-direction: column;
         margin-right: auto;
@@ -836,6 +907,13 @@ footer .arriba:hover{
         width: 90%;
     }
 }
+@media(max-width:600px){
+    .fotoAvatar{
+        position: relative;
+        width: 250px;
+        height: 250px;
+    }
+}
 @media(max-width:480px){
     .instituto{
         flex-direction: column;
@@ -847,14 +925,40 @@ footer .arriba:hover{
     .padrePortfolio{
         width: 100%;
     }
+    .sitioWeb{
+        width: 320px;
+    }
+    .proyecto{
+        width: 320px;
+    }
+    .barra-skill{
+        width: 95%;
+        height: 13px;
+    }
+    .progreso{
+        height: 13px;
+    }
+    .barra-skill span {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        background-color: var(--color-primario);
+        border-radius: 50px;
+        line-height: 40px;
+        text-align: center;
+        font-weight: bold;
+        top: -14px;
+        right: -15px;
+        font-size: 12px;
+    }
     .formulario{
         width: 80%;
     }
     .mapa{
        display: none;
     }
+    
 }
-
 
 /*
 @media (max-width:992px){ 

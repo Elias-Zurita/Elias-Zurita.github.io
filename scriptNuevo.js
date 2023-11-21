@@ -20,3 +20,23 @@ function efectoHabilidades(){
 window.onscroll = function(){
     efectoHabilidades(); // Animacion de habilidades
 } 
+
+// Cerrar el menú Header cuando se hace clic en un enlace
+var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+        var navbarCollapse = document.getElementById("navbarSupportedContent");
+        if (navbarCollapse.classList.contains("show")) {
+            navbarCollapse.classList.remove("show");
+        }
+    });
+});
+
+// Cerrar el menú Header cuando se hace clic fuera del menú
+document.addEventListener('click', function (event) {
+    var navbarCollapse = document.getElementById("navbarSupportedContent");
+    var targetElement = event.target;
+    if (navbarCollapse.classList.contains("show") && !targetElement.closest('.navbar')) {
+        navbarCollapse.classList.remove("show");
+    }
+});
