@@ -139,7 +139,7 @@ header{
     transform: scaleX(1);
   }
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-    color: white
+    color: white;
 }
 .dropdown-menu.show {
     background: #343a40;
@@ -222,20 +222,17 @@ header{
 #inicio{
     margin-top: 70px;
     height: 92vh;
-    border: #25D366 solid 3px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .inicioPadre{
     display: flex;
-    border: blue solid 2px;
     width: 1300px;
 }
 .presentacion{
     display:flex;
     flex-direction: column;
-    border: violet solid 2px;
     width: 50%;
     font-family: 'Righteous', sans-serif;
     justify-content: center;
@@ -321,7 +318,7 @@ header{
     align-items:center;
 }
 .fotoAvatar img{
-    border: 3px solid crimson;
+    border: 3px solid var(--color-primario);
     display: block;
     width: 90%;  /* Al ser 10% mas chico que la caja de imagen separa los circulos que giran */
     border-radius: 50%;
@@ -336,8 +333,8 @@ header{
     border-radius: 50%;
     border-top: 3px solid black;  /* El borde de arriba y abajo son del color del fondo (para que simule no aparecer) */
     border-bottom: 3px solid black;
-    border-left: 3px solid crimson;
-    border-right: 3px solid crimson;
+    border-left: 3px solid var(--color-primario);
+    border-right: 3px solid var(--color-primario);
     animation: girar 5s linear infinite;
 }
 @keyframes girar {
@@ -355,18 +352,14 @@ header{
     margin-top: 30px;
     display: flex;
     justify-content:center;
-    border: #25D366 solid 3px;
     align-items: center;
 }
 .cajaSobreMi{
-    border: red solid 2px;
     width: 40%;
     text-align: start;
-    border: blue solid 2px;
     margin-right: 50px;
 }
 .interesesPadre{
-    border: goldenrod solid 2px;
     width: 40%;
     margin-bottom: auto;
     
@@ -377,7 +370,6 @@ header{
     width: 80%;
     justify-content:center;
     align-items: center;
-    border: #25D366 solid 2px;
     margin: 20px auto
 }
 .interes{
@@ -437,12 +429,16 @@ header{
     margin-top: 30px;
     display: flex;
     justify-content:center;
-    border: #25D366 solid 3px;
     align-items: center;
     flex-direction: column;
 }
+.nav-tabs{
+    border-bottom: none;
+}
+.nav-link.active{
+    border-radius: 10px;
+}
 .tab-content{
-    border: red solid 3px;
     width: 1300px;
 }
 .herramientasPadre{
@@ -452,13 +448,11 @@ header{
 .cajaHerramientas{
     display: flex;
     flex-wrap: wrap;
-    border: yellow solid 2px;
     width: 550px;
     align-items: center;
     justify-content: center;
 }
 .herramienta{
-    border: blue solid 2px;
     width: 90px;
     height: 90px;
     font-size: 60px;
@@ -473,7 +467,7 @@ header{
     color: #e34c26;
 }
 .herramienta:hover .fa-css3-alt{
-    color: #264de4;
+    color: #2965f1;
 }
 .herramienta:hover .fa-js{
     color: #F0DB4F;
@@ -484,8 +478,11 @@ header{
 .herramienta:hover .fa-node{
     color: #68a063;
 }
+.herramienta:hover .fa-github{
+    color: purple;
+}
 .herramienta:hover .fa-database{
-    color: var(--color-primario)
+    color: rgb(47, 255, 234)
 }
 .herramienta:hover .fa-bootstrap{
     color: #563d7c
@@ -495,7 +492,6 @@ header{
 }
 .hablidadesBlandasPadre{
     display: flex;
-    border: violet solid 3px;
     justify-content: space-between;
 }
 .columnaHabilidades{
@@ -503,7 +499,6 @@ header{
 }
 .habilidad{
     width: 100%;
-    border: #0d6efd solid 2px;
 }
 .habilidad h2{
     text-align: start
@@ -662,7 +657,6 @@ header{
 .padrePortfolio{
     display: flex;
     flex-wrap: wrap;
-    border: red solid 2px;
     width: 80%;
     margin: 0 auto;
     justify-content:center;
@@ -671,7 +665,6 @@ header{
     display: flex;
     flex-direction: column;
     width: 350px;
-    border: blue solid 2px;
     margin: 20px;
 }
 .proyecto{
@@ -739,11 +732,9 @@ header{
     display: flex;
     justify-content: space-between;
     width: 992px;
-    border: blueviolet solid 5px;
     margin: 0 auto;
 }
 .formulario{
-    border: greenyellow solid 2px;
     display: flex;
     justify-content:center;
 }
@@ -768,7 +759,6 @@ header{
     resize: none /* no permite agrandar o achicar el text area */
 }
 .mapa{
-    border: blue solid 2px;
     width: 450px;
     position: relative;
 }
