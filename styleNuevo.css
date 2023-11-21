@@ -28,9 +28,12 @@ h3{
     font-family: 'Righteous', sans-serif;
     font-size: 30px;
 }
+:root{
+    --color-primario: crimson;
+}
 /*================== HEADER ==================*/
 header{
-    background: #1f1f1f;
+    background: #252A2E;
     font-family: "Poppins", sans-serif;
 }
 
@@ -105,14 +108,27 @@ header{
     align-items: center;
     justify-content: center;
     margin: 0 10px;
-}
-.nav-link.active {
-    color: #0d6efd !important;
+    position: relative;
 }
 .nav-link:hover{
-    background: #343a40;
-    color: white;
+    color: crimson;
+    font-style: italic;
 }
+.subrayado::after{  /* raya del subtitulo */
+    content: " ";
+    position: absolute;
+    bottom: 13px;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    background-color: var(--color-primario);
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+  }
+  .subrayado:hover::after{
+    transform: scaleX(1);
+  }
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: white
 }
@@ -195,8 +211,8 @@ header{
     height: 90vh;
 }
 #inicio{
-    margin-top: 80px;
-    height: 90vh;
+    margin-top: 70px;
+    height: 92vh;
     border: #25D366 solid 3px;
     display: flex;
     align-items: center;
@@ -211,7 +227,7 @@ header{
     font-family: 'Righteous', sans-serif;
 }
 .colorAlternativo{
-    color: crimson;
+    color: var(--color-primario);
     font-family: 'Righteous', sans-serif;
 }
 .presentacion h2{
@@ -272,13 +288,13 @@ header{
     line-height: 42px;
     margin: 5px;
     font-size: 20px;
-    transition: .3s ease-in-out;
+    transition: .3s;
     text-align: center;
     z-index: 2000;
 }
 .redesInicio a:hover{
-    background: white;
-    color: crimson;
+    background-color: var(--color-primario);
+    border: var(--color-primario);
 }
 .foto{
     z-index: 1000;
@@ -290,8 +306,8 @@ header{
 
 /*================== SOBRE MI ==================*/
 #sobremi{
-    margin: 80px 0;
     text-align: center;
+    padding: 70px 0px 30px 0px;
 }
 .padreSobreMi{
     margin-top: 30px;
@@ -342,7 +358,7 @@ header{
     font-size: 30px;
 }
 .interes:hover{
-    background-color: crimson;
+    background-color: var(--color-primario);
     color: white;
     transform: scale(1.08); 
 }
@@ -361,19 +377,19 @@ header{
     letter-spacing: 2px;
 }
 .cajaCv button:hover{
-    background-color: crimson;
+    background-color: var(--color-primario);
     color: #050801;
     border: none;
-    box-shadow: 0 0 5px crimson,
-                0 0 25px crimson,
-                0 0 50px crimson,
-                0 0 200px crimson;
+    box-shadow: 0 0 5px var(--color-primario),
+                0 0 25px var(--color-primario),
+                0 0 50px var(--color-primario),
+                0 0 200px var(--color-primario);
 }
 
 /*================== SKILLS ==================*/
 #skills{
-    margin: 80px 0;
     text-align: center;
+    padding: 70px 0px 30px 0px;
 }
 .padreSkills{
     margin-top: 30px;
@@ -385,7 +401,7 @@ header{
 }
 .tab-content{
     border: red solid 3px;
-    width: 70%;
+    width: 1300px;
 }
 .herramientasPadre{
     display: flex;
@@ -395,7 +411,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     border: yellow solid 2px;
-    width: 45%;
+    width: 550px;
     align-items: center;
     justify-content: center;
 }
@@ -427,13 +443,13 @@ header{
     color: #68a063;
 }
 .herramienta:hover .fa-database{
-    color: crimson
+    color: var(--color-primario)
 }
 .herramienta:hover .fa-bootstrap{
     color: #563d7c
 }
 .cajaHabilidadesTecnicas{
-    width: 45%;
+    width: 550px;
 }
 .hablidadesBlandasPadre{
     display: flex;
@@ -441,7 +457,7 @@ header{
     justify-content: space-between;
 }
 .columnaHabilidades{
-    width:45%;
+    width: 550px;
 }
 .habilidad{
     width: 100%;
@@ -458,7 +474,7 @@ header{
     margin-bottom: 30px;
 }
 .progreso{
-    background-color: crimson;
+    background-color: var(--color-primario);
     position: absolute;
     top: 0;
     left: 0;
@@ -468,7 +484,7 @@ header{
     position: absolute;
     height: 45px;
     width: 45px;
-    background-color: crimson;
+    background-color: var(--color-primario);
     border-radius: 50px;
     line-height: 40px;
     text-align: center;
@@ -553,13 +569,13 @@ header{
 
 /*================== EDUCACION/TRABAJOS ==================*/
 #educacion{
-    margin: 80px 0;
     text-align: center;
+    padding: 70px 0px 30px 0px;
 }
 .padreInstitutos{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 992px;
     margin: 20px auto;
 }
 .instituto{
@@ -569,7 +585,7 @@ header{
     margin-top:20px
 }
 .instituto:hover{
-    border-bottom: crimson solid 3px;
+    border-bottom: var(--color-primario) solid 3px;
 }
 .imagenInstituto{
     width: 180px;
@@ -594,7 +610,7 @@ header{
 
 /*================== PORTFOLIO ==================*/
 #portfolio{
-    margin: 80px 0;
+    padding: 70px 0px 30px 0px;
     text-align: center
 }
 .padrePortfolio{
@@ -629,7 +645,7 @@ header{
     height: 100%;
     text-align: center;
     color: white;
-    background:crimson;
+    background:var(--color-primario);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -662,7 +678,7 @@ header{
     margin-top: 10px;
 }
 .botonRepo button:hover {
-    background-color: crimson;
+    background-color: var(--color-primario);
     transition: .3s ease-in-out;
     cursor: pointer;
     border-radius: 15px;
@@ -670,13 +686,13 @@ header{
 
 /*================== CONTACTO ==================*/
 #contacto{
+    padding: 70px 0px 30px 0px;
     text-align: center;
-    margin: 80px 0;
 }
 .contactoPadre{
     display: flex;
     justify-content: space-between;
-    width: 1000px;
+    width: 992px;
     border: blueviolet solid 5px;
     margin: 0 auto;
 }
@@ -720,3 +736,134 @@ header{
     text-align: start;
     padding: 20px;
 }
+
+/*================== FOOTER ==================*/
+footer{
+    margin-top: 150px;
+    background-color: #252A2E;
+    color: #fff;
+    padding: 40px 0 8px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 5px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .redes a:hover{
+    background-color: var(--color-primario);
+    border: var(--color-primario);
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primario);
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+    transition: .3s ease-in-out;
+}
+footer .arriba:hover{
+    background-color: white;
+    color: black;
+    transform: translateY(-10px);
+}
+@media (max-width:1300px){
+    .tab-content{
+        width: 90%;
+    }
+    .herramientasPadre, .hablidadesBlandasPadre{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+}
+@media (max-width:992px){
+    .padreSobreMi{
+        flex-direction: column;
+        margin-right: auto;
+    }
+    .cajaSobreMi{
+        width: 90%;
+        margin: 0 auto 30px auto;
+    }
+    .interesesPadre{
+        width: 90%;
+    }
+    .cajasIntereses{
+        width: 100%;
+    }
+    .padreInstitutos{
+        width: 90%;
+    }
+    .padrePortfolio{
+        width: 90%;
+    }
+    .proyecto{
+        width: 330px;
+        margin: 0 auto;
+    }
+    .contactoPadre{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .mapa{
+        margin-top: 40px;
+        height: 500px;
+    }
+}
+@media (max-width:800px){
+    .cajaHerramientas, .cajaHabilidadesTecnicas, .columnaHabilidades{
+        width: 90%;
+    }
+}
+@media(max-width:480px){
+    .instituto{
+        flex-direction: column;
+    }
+    .imagenInstituto{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .padrePortfolio{
+        width: 100%;
+    }
+    .formulario{
+        width: 80%;
+    }
+    .mapa{
+       display: none;
+    }
+}
+
+
+/*
+@media (max-width:992px){ 
+    :root{
+        --color-primario: #1CB698;
+    }
+    body{
+        color: black;
+        background: white;
+    }
+}
+*/
