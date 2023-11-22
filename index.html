@@ -7,7 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Paytone+One"> <!-- link para usar Paytone One como tipo de fuente  -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Inter:wght@600&family=Krona+One&family=Montserrat:wght@700&family=Righteous&family=Tomorrow&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         
         <!-- Vinculacion con Bootstrap  y w3schools -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -16,8 +19,7 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         
         <!-- vinculacion del HTML con style.css -->
-        <link rel="stylesheet" href="style.css"> 
-        <link rel="stylesheet" href="styleNuevo.css"> 
+        <link rel="stylesheet" href="styles.css"> 
 
          <!-- Icono y titulo en pestaña del navegador -->
         <link rel="shortcut icon" href="img/icono.png">
@@ -42,29 +44,35 @@
                         <div class="bar3"></div>
                     </div>
                 </button>
-
+    
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a href="#inicio" class="nav-link">INICIO</a>
+                            <a href="#" class="nav-link subrayado">INICIO</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#sobremi" class="nav-link">SOBRE MÍ</a>
+                            <a href="#sobremi" class="nav-link subrayado">SOBRE MÍ</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#skills" class="nav-link">SKILLS</a>
+                            <a href="#skills" class="nav-link subrayado">SKILLS</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#curriculum" class="nav-link">CURRICULUM</a>
+                            <a href="#educacion" class="nav-link subrayado">EDUCACIÓN</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#contacto" class="nav-link">CONTACTO</a>
+                            <a href="#experiencia" class="nav-link subrayado">EXPERIENCIA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#portfolio" class="nav-link subrayado">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contacto" class="nav-link subrayado">CONTACTO</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-
+    
         <script>
             function myFunction(x) {
                 x.classList.toggle("change");
@@ -73,295 +81,304 @@
     </header>
 
     <body>
+
+        <div id="particles-js"></div>
         
-        <!-- SECCION INICIO -->
-        <section id="inicio" class="inicio show-animate">
-            <div class="contenido-banner">
-                <div class="contenedor-img">
+        <section id="inicio">
+            <div class="inicioPadre">
+                <div class="presentacion">
+                    <h3>Bienvenid@ a mi Portfolio Web</h2>
+                    <h1>SOY <span class="colorAlternativo">ELIAS ZURITA</span></h1>
+                    <h2>FULL STACK DEVELOPER WEB</h2>
+                    <div class="redesInicio">
+                        <a href="https://www.linkedin.com/in/elias-zurita/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Elias-Zurita" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://wa.me/5491165599444?text=" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="mailto:eliass.zurita@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="fotoAvatar">
                     <img src="img/avatar.jpg" alt="">
                     <span class="circle-spin"></span>
                 </div>
-                <h1>ELIAS ZURITA</h1>
-                <h2>Desarrollador Web Full Stack</h2>
-                <div class="redes">
-                    <a href="https://www.linkedin.com/in/elias-zurita/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://github.com/Elias-Zurita" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://wa.me/5491165599444?text=" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="mailto:eliass.zurita@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-                </div>
-                <span class="animate" style="--i:2"></span>
             </div>
         </section>
 
-        <!-- SECCION SOBRE MI -->
-        <section id="sobremi" class="sobremi">
-            <div class="contenido-seccion">
-                <h2>Sobre Mí</h2>
-                <p><strong>Hola, soy Elias Zurita.</strong>Soy una persona entusiasta y perseverante. Busco desafíos que me permitan sumarle valor a las empresas y perfeccionar mis conocimientos en el ámbito del desarrollo web.</p>
-                <div class="fila">
-                    <!-- datos personales -->
-                    <div class="col">
-                        <h3>Datos Personales</h3>
-                        <ul>
-                            <li>
-                                <strong>Cumpleaños</strong>
-                                05/07/1990
-                            </li>
-                            <li>
-                                <strong>Teléfono</strong>
-                                <a href="https://wa.me/5491165599444?text=" target="_blank">11 6559 9444</a>
-                            </li>
-                            <li>
-                                <strong>Email</strong>
-                                <a href="mailto:eliass.zurita@gmail.com">eliass.zurita@gmail.com</a>
-                            </li>
-                            <li>
-                                <strong>Github</strong>
-                                <a href="https://github.com/Elias-Zurita" target="_blank">/Elias-Zurita</a>
-                            </li>
-                            <li>
-                                <strong>Domicilio</strong>
-                                Bella Vista,Bs.As, Argentina
-                            </li>
-                            <li>
-                                <strong>Cargo</strong>
-                                <span>FREELANCE</span>
-                            </li>
-                        </ul>
-                    </div>
-    
-                    <!-- intereses -->
-                    <div class="col">
-                        <h3>Intereses</h3>
-                        <div class="contenedor-intereses">
-                            <div class="interes">
-                                <i class="fa-solid fa-gamepad"></i>
-                                <span>JUEGOS</span>
-                            </div>
-                            <div class="interes">
-                                <i class="fas fa-guitar"></i>
-                                <span>MUSICA</span>
-                            </div>
-                            <div class="interes">
-                                <i class="fa-solid fa-plane"></i>
-                                <span>VIAJAR</span>
-                            </div>
-                            <div class="interes">
-                                <i class="fas fa-dog"></i>
-                                <span>ANIMALES</span>
-                            </div>
-                            <div class="interes">
-                                <i class="fas fa-volleyball-ball"></i>
-                                <span>DEPORTE</span>
-                            </div>
-                            <div class="interes">
-                                <i class="fas fa-code"></i>
-                                <span>WEB</span>
-                            </div>
-                            <div class="interes">
-                                <i class="fa-solid fa-car"></i>
-                                <span>AUTOS</span>
-                            </div>
-                            <div class="interes">
-                                <i class="fa-solid fa-camera"></i>
-                                <span>FOTOS</span>
-                            </div>
-                        </div>
-                    </div>
+        <section id="sobremi">
+            <h1>SOBRE MÍ</h1>
+            <div class="padreSobreMi">
+                <div class="cajaSobreMi">
+                    <p> Soy un apasionado desarrollador web full stack con una sólida formación y experiencia en la creación de soluciones web innovadoras. Mi fascinación por la tecnología y mi compromiso con la excelencia me han llevado a explorar y dominar diversas tecnologías para ofrecer experiencias web eficientes y atractivas.</p>
+                    <p>Disfruto enfrentando desafíos y resolviendo problemas. Mi enfoque se centra en el desarrollo de aplicaciones web que no solo sean funcionales, sino también intuitivas y agradables para el usuario. La creatividad y la atención al detalle son fundamentales en mi proceso de trabajo.</p>
+                    <p>Como full stack developer web, tengo experiencia tanto en el desarrollo del lado del cliente como en el del servidor.</p>
+                    <p>El mundo del desarrollo web evoluciona constantemente, y me esfuerzo por mantenerme actualizado con las últimas tendencias y tecnologías. Mi enfoque en el aprendizaje continuo me permite adaptarme rápidamente y ofrecer soluciones que estén a la vanguardia de la industria.</p>
+                    <p>Si buscas un desarrollador comprometido, creativo y orientado a resultados, no dudes en contactarme. ¡Me encantaría escuchar más sobre tu proyecto y cómo puedo ayudar!</p>
+                    <p>¡Gracias por visitar mi Portfolio!</p>
                 </div>
-                <a href="https://drive.google.com/file/d/1J3MOTUDeLlFwFvQcaM_86xwv9myrXtZm/view?usp=sharing" target="_blank">
-                    <button>
-                        Descargar CV <i class="fa-solid fa-download"></i>
-                        <span class="overlay"></span>
-                    </button>
-                </a>
-            </div>
-            
-        </section>
-        <!-- SECCION SKILLS -->
-        <section id="skills" class="skills">
-            <div class="contenido-seccion">
-                <h2>Skills></h2>
-                <div class="fila">
-                    <!-- Technical Skill -->
-                    <div class="col">
-                        <h3>Technical Skills</h3>
-                        <div class="skill">
-                            <span><img title="JavaScript" alt="JavaScript" src="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png" width="17" height="17" /> Javascript</span>
-                            <div class="barra-skill">
-                                <div class="progreso">
-                                    <span><i class="fa-solid fa-check"></i></span>
-                                </div>
-                            </div>
+                <div class="interesesPadre">
+                    <h2>Intereses</h2>
+                    <div class="cajasIntereses">
+                        <div class="interes">
+                            <i class="fas fa-code"></i>
+                            <span>WEB</span>
                         </div>
-                        <div class="skill">
-                            <span><img title="Html" alt="Html" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" width="17" height="17"/> HTML</span>
-                            <div class="barra-skill">
-                                <div class="progreso">
-                                    <span><i class="fa-solid fa-check"></i></span>
-                                </div>
-                            </div>
+                        <div class="interes">
+                            <i class="fas fa-guitar"></i>
+                            <span>MUSICA</span>
                         </div>
-                        <div class="skill">
-                            <span><img title="CSS" alt="CSS" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" width="17" height="17"/> CSS</span>
-                            <div class="barra-skill">
-                                <div class="progreso">
-                                    <span><i class="fa-solid fa-check"></i></span>
-                                </div>
-                            </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
                         </div>
-                        <div class="skill">
-                            <span><img title="ReactJS" alt="ReactJS" src="https://github.com/hussainweb/hussainweb/raw/main/icons/react.png" width="17" height="17"/> ReactJs</span>
-                            <div class="barra-skill">
-                                <div class="progreso">
-                                    <span><i class="fa-solid fa-check"></i></span>
-                                </div>
-                            </div>
+                        <div class="interes">
+                            <i class="fas fa-volleyball-ball"></i>
+                            <span>DEPORTE</span>
                         </div>
-                        <div class="skill">
-                            <span><img title="NodeJS" alt="NodeJS" src="https://cdn.iconscout.com/icon/free/png-512/node-js-1174925.png" width="17" height="17"/> NodeJs</span>
-                            <div class="barra-skill">
-                                <div class="progreso">
-                                    <span><i class="fa-solid fa-check"></i></span>
-                                </div>
-                            </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fas fa-dog"></i>
+                            <span>ANIMALES</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-car"></i>
+                            <span>AUTOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-camera"></i>
+                            <span>FOTOS</span>
                         </div>
                     </div>
-                    <!-- Professional Skills -->
-                    <div class="col">
-                        <h3>Professional Skills</h3>
-                        <div class="skill">
-                            <span>Comunicación</span>
-                            <div class="barra-skill">
-                                <div class="progreso">
-                                    <span>80%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Trabajo en Equipo</span>
-                            <div class="barra-skill">
-                                <div class="progreso">
-                                    <span>100%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Creatividad</span>
-                            <div class="barra-skill">
-                                <div class="progreso">
-                                    <span>80%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Dedicación</span>
-                            <div class="barra-skill">
-                                <div class="progreso">
-                                    <span>100%</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <span>Proyect Management</span>
-                            <div class="barra-skill">
-                                <div class="progreso">
-                                    <span>85%</span>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="cajaCv">
+                        <a href="img/CV ELIAS ZURITA.pdf" target="_blank">
+                            <button>
+                                Descargar CV <i class="fa-solid fa-download"></i>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-         <!-- SECCION CURRICULUM -->
-        <section id="curriculum" class="curriculum">
-            <div class="contenido-seccion">
-                <h2>Curriculum</h2>
-                <div class="fila">
-                    <div class="col izquierda">
-                        <h3>Formación academica</h3>
-                        <div class="item izq">
-                            <h4>Desarrollador Web Full Stack</h4>
-                            <span class="casa">Digital House</span>
-                            <span class="fecha">2021 - 2021</span>
-                            <p></p>
-                            <div class="conectori">
-                                <div class="circuloi"></div>
-                            </div>
-                        </div>
-                        <div class="item izq">
-                            <h4>Lic. Higiene y Seguridad</h4>
-                            <span class="casa">UNLZ</span>
-                            <span class="fecha">2012 - 2014</span>
-                            <p></p>
-                            <div class="conectori">
-                                <div class="circuloi"></div>
-                            </div>
-                        </div>
-                        <div class="item izq">
-                            <h4>Tec. Higiene y Seguridad</h4>
-                            <span class="casa">IPES</span>
-                            <span class="fecha">2009 - 2011</span>
-                            <p></p>
-                            <div class="conectori">
-                                <div class="circuloi"></div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col derecha">
-                        <h3>Experiencia laboral</h3>
-                        <div class="item der">
-                            <h4>Full Stack Developer</h4>
-                            <span class="casa">SportsOnline</span>
-                            <span class="fecha">2021 - 2022</span>
-                            <p></p>
-                            <div class="conectord">
-                                <div class="circulod"></div>
+        <section id="skills">
+            <h1>SKILLS</h1>
+            <div class="padreSkills">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Technical Skills</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Soft Skills</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                        <div class="herramientasPadre">
+                            <div class="cajaHerramientas">
+                                <div class="herramienta">
+                                    <i class="fa-brands fa-html5"></i>
+                                </div>
+                                <div class="herramienta">
+                                    <i class="fa-brands fa-css3-alt"></i>
+                                </div>
+                                <div class="herramienta">
+                                    <i class="fa-brands fa-js"></i>
+                                </div>
+                                <div class="herramienta">
+                                    <i class="fa-brands fa-react"></i>
+                                </div>
+                                <div class="herramienta">
+                                    <i class="fa-brands fa-node"></i>
+                                </div>
+                                <div class="herramienta">
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <div class="herramienta">
+                                    <i class="fa-solid fa-database"></i>
+                                </div>
+                                <div class="herramienta">
+                                    <i class="fa-brands fa-bootstrap"></i>
+                                </div>
+                            </div>
+                            <div class="cajaHabilidadesTecnicas">
+                                <div class="habilidad">
+                                    <h2>Responsive Design</h2>
+                                    <div class="barra-skill">
+                                        <div class="progreso">
+                                            <span>100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="habilidad">
+                                    <h2>Bases de Datos</h2>
+                                    <div class="barra-skill">
+                                        <div class="progreso">
+                                            <span>80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="habilidad">
+                                    <h2>Front-end</h2>
+                                    <div class="barra-skill">
+                                        <div class="progreso">
+                                            <span>90%</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="item der">
-                            <h4>Lic. Higiene y Seguridad</h4>
-                            <span class="casa">Freelance</span>
-                            <span class="fecha">2015 - 2022</span>
-                            <p></p>
-                            <div class="conectord">
-                                <div class="circulod"></div>
+                    </div>
+                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                        <div class="hablidadesBlandasPadre">
+                            <div class="columnaHabilidades">
+                                <div class="habilidad">
+                                    <h2>TRABAJO EN EQUIPO</h2>
+                                    <div class="barra-skill">
+                                        <div class="progreso">
+                                            <span>100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="habilidad">
+                                    <h2>CREATIVIDAD</h2>
+                                    <div class="barra-skill">
+                                        <div class="progreso">
+                                            <span>80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="habilidad">
+                                    <h2>ADAPTABILIDAD</h2>
+                                    <div class="barra-skill">
+                                        <div class="progreso">
+                                            <span>80%</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="item der">
-                            <h4>Tec. Higiene y Seguridad</h4>
-                            <span class="casa">Ezentis de Arg.</span>
-                            <span class="fecha">2014 - 2020</span>
-                            <p></p>
-                            <div class="conectord">
-                                <div class="circulod"></div>
+                            <div class="columnaHabilidades">
+                                <div class="habilidad">
+                                    <h2>AUTOAPRENDISAJE</h2>
+                                    <div class="barra-skill">
+                                        <div class="progreso">
+                                            <span>85%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="habilidad">
+                                    <h2>DEDICACIÓN</h2>
+                                    <div class="barra-skill">
+                                        <div class="progreso">
+                                            <span>100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="habilidad">
+                                    <h2>ORGANIZACIÓN</h2>
+                                    <div class="barra-skill">
+                                        <div class="progreso">
+                                            <span>90%</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-        <!-- SECCION PORTFOLIO -->
-        <section id="portfolio" class="portfolio">
-            <div class="contenido-seccion">
-                <h2>PORTFOLIO</h2>
-                <div class="galeria">
-                    <div>
-                        <div class="proyecto">
-                            <a href="https://sports-online-e-commerce-elias-zurita.vercel.app/" target="_blank">
-                            <img src="img/p1.jpg" alt="">
-                            <div class="overlay">
-                                <h3>APP E-Commerce</h3>
-                                <p>SportsOnline</p>
-                            </div>
-                            </a>
-                        </div>
-                        <div class="botonRepo"><a href="https://github.com/Elias-Zurita/SportsOnline-ECommerce" target="_blank"><button><i class="fa-brands fa-github"></i> Repositorio</button></a></div>
+
+        <section id="educacion">
+            <h1>FORMACIÓN ACADÉMICA</h1>
+            <div class="padreInstitutos">
+                <div class="instituto">
+                    <div class="imagenInstituto">
+                        <img src="img/coder house logo.png" alt="">
                     </div>
-                    <div>
+                    <div class="infoInstituto">
+                        <h2>CODER HOUSE</h2>    
+                        <p>NOV 2023 - CURSANDO</p>
+                        <p>Testing QA Manual</p>
+                    </div>
+                </div>
+                <div class="instituto">
+                    <div class="imagenInstituto">
+                        <img src="img/digital house logo.jpg" alt="">
+                    </div>
+                    <div class="infoInstituto">
+                        <h2>DIGITAL HOUSE</h2>    
+                        <p>MAY 2021 - DIC 2021</p>
+                        <p>Programación Web Full Stack</p>
+                    </div>
+                </div>
+                <div class="instituto">
+                    <div class="imagenInstituto">
+                        <img src="img/unlz logo.png" style="width: 100px">
+                    </div>
+                    <div class="infoInstituto">
+                        <h2>UNLZ</h2>    
+                        <p>MAR 2009 - DIC 2014</p>
+                        <p>Lic. en Higiene y Seguridad</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia">
+            <h1>EXPERIENCIA LABORAL</h1>
+            <div class="padreInstitutos">
+                <div class="instituto">
+                    <div class="imagenInstituto">
+                        <img src="img/importainer logo.png" alt="" style="width: 100px">
+                    </div>
+                    <div class="infoInstituto">
+                        <h2>IMPORTAINER S.A.</h2>    
+                        <p>JUN 2023 - ACTUALIDAD</p>
+                        <p>Desarrollador Web Full Stack</p>
+                    </div>
+                </div>
+                <div class="instituto">
+                    <div class="imagenInstituto">
+                        <img src="img/e z logo.png" alt="">
+                    </div>
+                    <div class="infoInstituto">
+                        <h2>FREELANCE</h2>    
+                        <p>ENE 2022 - ACTUALIDAD</p>
+                        <p>Diseñador Web</p>
+                    </div>
+                </div>
+                <div class="instituto">
+                    <div class="imagenInstituto">
+                        <img src="img/ezentis logo.png" style="width: 150px">
+                    </div>
+                    <div class="infoInstituto">
+                        <h2>EZENTIS</h2>    
+                        <p>MAR 2014 - DIC 2020</p>
+                        <p>Lic. en Higiene y Seguridad</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h1>PORTFOLIO</h1>
+            <div class="padrePortfolio">
+                <div class="sitioWeb">
+                    <div class="proyecto">
+                        <a href="https://sports-online-e-commerce-elias-zurita.vercel.app/" target="_blank">
+                        <img src="img/sportsonline.jpg" alt="">
+                        <div class="overlay">
+                            <h3>APP E-Commerce</h3>
+                            <p>SportsOnline</p>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="botonRepo"><a href="https://github.com/Elias-Zurita/SportsOnline-ECommerce" target="_blank"><button><i class="fa-brands fa-github"></i> Repositorio</button></a></div>
+                </div>
+                <div>
+                    <div class="sitioWeb">
                         <div class="proyecto">
                             <a href="https://blancoelectricista.com/" target="_blank">
                             <img src="img/BlancoElectricista.jpg" alt="">
@@ -373,19 +390,23 @@
                         </div>
                         <div class="botonRepo"><a href="https://github.com/Elias-Zurita/ElectricistaBlancoWeb" target="_blank"><button><i class="fa-brands fa-github"></i> Repositorio</button></a></div>
                     </div>
-                    <div>
+                </div>
+                <div>
+                    <div class="sitioWeb">
                         <div class="proyecto">
                             <a href="https://consumo-de-api-cuentas-bancarias.vercel.app/" target="_blank">
                             <img src="img/logo ncr.jpg" alt="">
                             <div class="overlay">
-                                <h3>App Consumo de API de Terceros</h3>
+                                <h3>APP Consumo de API de Terceros</h3>
                                 <p>NCR Cuentas Bancarias</p>
                             </div>
                             </a>
                         </div>
                         <div class="botonRepo"><a href="https://github.com/Elias-Zurita/Consumo-de-API-Cuentas-Bancarias" target="_blank"><button><i class="fa-brands fa-github"></i> Repositorio</button></a></div>
                     </div>
-                    <div>
+                </div>
+                <div>
+                    <div class="sitioWeb">
                         <div class="proyecto">
                             <a href="https://sofiasanzfitness.com/" target="_blank">
                             <img src="img/sofisanz.jpg" alt="">
@@ -397,7 +418,9 @@
                         </div>
                         <div class="botonRepo"><a href="https://github.com/Elias-Zurita/Sofia-Sanz" target="_blank"><button><i class="fa-brands fa-github"></i> Repositorio</button></a></div>
                     </div>
-                    <div>
+                </div>
+                <div>
+                    <div class="sitioWeb">
                         <div class="proyecto">
                             <img src="img/p2.jpg" alt="">
                             <div class="overlay">
@@ -407,7 +430,9 @@
                         </div>
                         <div class="botonRepo"><a href="" target="_blank"><button><i class="fa-brands fa-github"></i> Repositorio</button></a></div>
                     </div>
-                    <div>
+                </div>
+                <div>
+                    <div class="sitioWeb">
                         <div class="proyecto">
                             <img src="img/p3.jpg" alt="">
                             <div class="overlay">
@@ -420,50 +445,38 @@
                 </div>
             </div>
         </section>
-        <!-- SECCION CONTACTO -->
-        <section id="contacto" class="contacto">
-            <div class="contenido-seccion">
-                <h2>CONTACTO</h2>
-                <div class="fila">
-                    <!-- Formulario -->
-                        <div class="col">
-                            <form action="https://api.web3forms.com/submit" method="POST" id="miFormulario">
-                                <input type="hidden" name="access_key" value="a62d97c9-54da-494c-a208-e9544ce3b723"> <!-- el value es la key que me envio por mail la pagina, eso vincula los msj a mi casilla de gmail -->
-                                <input type="hidden" name="redirect" value="https://elias-zurita.github.io/">
-                                <input type="text" placeholder="Nombre" name="nombre" minlength="4" maxlength="40" required >
-                                <input type="tel" placeholder="Teléfono" name="telefono" minlength="8" maxlength="20" required >
-                                <input type="email" placeholder="E-mail" name="email" required>
-                                <textarea name="mensaje" cols="30" rows="10" placeholder="Mensaje" name="mensaje" required></textarea>
-                                <button>
-                                    Enviar Mensaje <i class="fa-solid fa-paper-plane"></i>
-                                    <span class="overlay"></span>
-                                </button> 
-                            </form>
+
+        <section id="contacto">
+            <h1>CONTACTO</h1>
+            <div class="contactoPadre">
+                <div class="formulario">
+                    <form action="https://api.web3forms.com/submit" method="POST" id="miFormulario">
+                        <input type="hidden" name="access_key" value="a62d97c9-54da-494c-a208-e9544ce3b723"> <!-- el value es la key que me envio por mail la pagina, eso vincula los msj a mi casilla de gmail -->
+                        <input type="hidden" name="redirect" value="https://elias-zurita.github.io/">
+                        <input type="text" placeholder="🙂 Nombre" name="nombre" minlength="4" maxlength="40" required >
+                        <input type="tel" placeholder="📞 Teléfono" name="telefono" minlength="8" maxlength="20" required >
+                        <input type="email" placeholder="&#128231 E-mail" name="email" required>
+                        <textarea name="mensaje" cols="30" rows="7" placeholder="💬 Mensaje" name="mensaje" required></textarea>
+                        <div class="cajaCv">
+                            <button>
+                                <span>Enviar Mensaje</span> <i class="fa-solid fa-paper-plane"></i>
+                            </button> 
                         </div>
-                        
-                    <!-- Mapa -->
-                    <div class="col">
-                        <img src="img/ubicacion.png" alt="">
-                        <div class="info">
-                            <ul>
-                                <li>
-                                    <i class="fa-solid fa-location-dot"></i> Bella Vista, Bs.As.
-                                </li>
-                                <li>
-                                    <i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/5491165599444?text=" target="_blank"> 11 6559 9444</a>
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-envelope"></i><a href="mailto:eliass.zurita@gmail.com" target="_blank"> eliass.zurita@gmail.com</a>
-                                </li>
-                            </ul>
-                        </div>
+                    </form>
+                </div>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26282438.392597895!2d-84.81626165912178!3d-36.47433750354415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf5f5fdc667%3A0x3d2f77992af00fa8!2sArgentina!5e0!3m2!1ses!2sar!4v1700580923223!5m2!1ses!2sar" width="450" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="infoContacto">
+                        <p><i class="fa-solid fa-location-dot"></i>&nbsp Bs.As, Argentina</p>
+                        <p><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/5491165599444?text=" target="_blank">&nbsp 11 6559 9444</a></p>
+                        <p><i class="fa-solid fa-envelope"></i><a href="mailto:eliass.zurita@gmail.com" target="_blank">&nbsp eliass.zurita@gmail.com</a></p>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <footer>
-            <a href="#inicio" class="arriba">
+            <a href="#" class="arriba">
                 <i class="fa-solid fa-angles-up"></i>
             </a>
             <div class="redes">
@@ -474,9 +487,125 @@
             </div>
         </footer>
 
+        
         <script src="script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="sweetalert2.js"></script>
+        
+        <!-- Fondo de particulas -->
+        <script src="js/particles.min.js"></script>
+        <script>particlesJS(
+            {
+            "particles": {
+                "number": {
+                "value": 50,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+                },
+                "color": {
+                "value": "#ffffff"
+                },
+                "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+                },
+                "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+                },
+                "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+                },
+                "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+                },
+                "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+                },
+                "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                    "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+                }
+            },
+            "retina_detect": true
+            }
+        )</script>
     </body>
 
 </html>
