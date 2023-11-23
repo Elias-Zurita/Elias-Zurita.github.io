@@ -26,61 +26,69 @@
         <title>Portfolio EZ</title>
     </head>
 
-    <header class="fixed-top">
-
-        <!-- Boton de whats app para todas las vistas -->
-        <a href="https://wa.me/5491165599444?text=" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i></a>
-
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a href="#"><div class="logoHeader">
-                    <img src="img/icono.png" alt="">
-                </div></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <!-- Burger Button WH3S -->
-                    <div class="container" onclick="myFunction(this)">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-                </button>
-    
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link subrayado">INICIO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#sobremi" class="nav-link subrayado">SOBRE MÍ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#skills" class="nav-link subrayado">SKILLS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#educacion" class="nav-link subrayado">EDUCACIÓN</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#experiencia" class="nav-link subrayado">EXPERIENCIA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#portfolio" class="nav-link subrayado">PORTFOLIO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#contacto" class="nav-link subrayado">CONTACTO</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    
-        <script>
-            function myFunction(x) {
-                x.classList.toggle("change");
-            }
-        </script>
-    </header>
-
     <body>
+
+        <header class="fixed-top">
+
+            <!-- Boton de whats app para todas las vistas -->
+            <a href="https://wa.me/5491165599444?text=" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i></a>
+    
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a href="#"><div class="logoHeader">
+                        <img src="img/iconso.png" alt="">
+                    </div></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <!-- Burger Button WH3S -->
+                        <div class="container" onclick="myFunction(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link subrayado">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#sobremi" class="nav-link subrayado">SOBRE MÍ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#skills" class="nav-link subrayado">SKILLS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#educacion" class="nav-link subrayado">EDUCACIÓN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#experiencia" class="nav-link subrayado">EXPERIENCIA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#portfolio" class="nav-link subrayado">PORTFOLIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contacto" class="nav-link subrayado">CONTACTO</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="botonNocturno">
+                        <input type="checkbox" id="toggle">
+                        <label class="toggle" for="toggle">
+                            <i class="fa-regular fa-moon"></i>
+                            <i class="fa-solid fa-sun"></i>
+                            <span class="ball"></span>
+                        </label>
+                    </div>
+                </div>
+            </nav>
+
+            <script>
+                function myFunction(x) {
+                    x.classList.toggle("change");
+                }
+            </script>
+        </header>
 
         <div id="particles-js"></div>
         
@@ -456,9 +464,10 @@
                         <input type="text" placeholder="🙂 Nombre" name="nombre" minlength="4" maxlength="40" required >
                         <input type="tel" placeholder="📞 Teléfono" name="telefono" minlength="8" maxlength="20" required >
                         <input type="email" placeholder="&#128231 E-mail" name="email" required>
+                        <input type="hidden" name="from_name" value="Portfolio Msj"> <!-- Porftolio msj establecido como asunto del mail -->
                         <textarea name="mensaje" cols="30" rows="7" placeholder="💬 Mensaje" name="mensaje" required></textarea>
                         <div class="cajaCv">
-                            <button>
+                            <button type="submit">
                                 <span>Enviar Mensaje</span> <i class="fa-solid fa-paper-plane"></i>
                             </button> 
                         </div>
@@ -486,12 +495,11 @@
                 <a href="mailto:eliass.zurita@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
             </div>
         </footer>
-
         
-        <script src="script.js"></script>
+        <script src="js/script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="sweetalert2.js"></script>
-        
+        <script src="js/sweetalert2.js"></script>
+        <script src="js/darkmode.js"></script>
         <!-- Fondo de particulas -->
         <script src="js/particles.min.js"></script>
         <script>particlesJS(
@@ -606,6 +614,7 @@
             "retina_detect": true
             }
         )</script>
+    
     </body>
 
 </html>

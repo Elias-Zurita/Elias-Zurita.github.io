@@ -135,9 +135,9 @@ header{
     transition-timing-function: ease-in-out;
     transform: scaleX(0);
   }
-  .subrayado:hover::after{
+.subrayado:hover::after{
     transform: scaleX(1);
-  }
+}
 .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
     color: white;
 }
@@ -161,6 +161,61 @@ header{
 .dropdown-menu[data-bs-popper] { /* Menu desplegable responsive de modelos de autos */
     margin: 0 10px;
 }
+/*------------ MODO NOCTURNO ------------*/
+.botonNocturno{
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+input#toggle{
+    display: none;
+}
+.light{
+    background-color: white; /* color que va a tener el body */
+    color: black;
+}
+.toggle .fa-moon{
+    color: black;  /* color de la luna cuando esta seleccionada */
+}
+.light .toggle .fa-moon{
+    color: white  /* color de la luna cuando no esta seleccionada */
+}
+.light .toggle .fa-sun{
+    color: black; /* color del sol cuando lo selecciono */
+}
+.light .toggle .ball{
+    background: white; /* pelota cuando pongo el sol */
+    transform: translateX(52px);
+}
+.toggle{
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    height: 60px;
+    border-radius: 50px;
+    transition: 2s;
+}
+.toggle i{
+    width: 50%;
+    line-height: 55px;
+    text-align: center;
+    font-size: 25px;
+    z-index: 1;
+}
+.toggle .ball{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 7.5px 3px;
+    border-radius: 50%;
+    transition: .3s ease-out;
+    background: white; /* color que tiene la pelota en la luna (seleccionada cuando aparece) */
+}
+
 @media (max-width:992px){ 
     .navbar-toggler{
         display:block 
@@ -301,7 +356,7 @@ header{
     font-size: 20px;
     transition: .3s;
     text-align: center;
-    z-index: 2000;
+    z-index: 200;
 }
 .redesInicio a:hover{
     background-color: var(--color-primario);
