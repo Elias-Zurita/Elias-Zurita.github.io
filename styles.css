@@ -120,7 +120,7 @@ header{
     position: relative;
 }
 .nav-link:hover{
-    color: var(--color-primario);
+    color: white;
     font-style: italic;
 }
 .subrayado::after{  /* raya del subtitulo */

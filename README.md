@@ -1,4 +1,6 @@
-<a href="https://elias-zurita.github.io/"><img src="https://Elias-Zurita.github.io/img/icono.png" width="210" height="250"/></a>
+<p align="center">
+  <a href="https://elias-zurita.github.io/"><img src="https://Elias-Zurita.github.io/img/icono.png" width="210" height="250"/></a>
+</p>
 
 # Portfolio Web 
 
