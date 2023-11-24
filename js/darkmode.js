@@ -9,3 +9,9 @@ toggle.addEventListener("change", () => {
     sunIcon.className = sunIcon.className == "fa-solid fa-sun" ? "fa-solid fa-sun" : "fa-solid fa-sun";
     moonIcon.className = moonIcon.className == "fa-regular fa-moon" ? "fa-regular fa-moon" : "fa-regular fa-moon";
 })
+
+toggle.addEventListener('change', function() {
+    // Colores nuevos en el modo claro
+    document.documentElement.style.setProperty('--color-primario', this.checked ? '#40cfff' : '#dc143c');
+  }
+);

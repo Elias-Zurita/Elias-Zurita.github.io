@@ -23,7 +23,7 @@ a{
 body{
     font-family: "Poppins", sans-serif;
     color: white;
-    background: black;
+    background: #000000;
 }
 h1{
     font-family: 'Righteous', sans-serif;
@@ -38,7 +38,7 @@ h3{
     font-size: 30px;
 }
 :root{
-    --color-primario: crimson;
+    --color-primario: #dc143c;
 }
 /*================== HEADER ==================*/
 header{
@@ -172,9 +172,66 @@ header{
 input#toggle{
     display: none;
 }
-.light{
-    background-color: white; /* color que va a tener el body */
+.light{ /* Body */
+    background-color: white; 
     color: black;
+}
+.light .particles{
+    color: red;
+}
+.light .navbar .nav-link{  /* Secciones header */
+    color: white;
+}
+.light .presentacion h2{ /* Texto autoescritura  */
+    background-image: linear-gradient(black, gray);  /* Color con el que va a rellenar las letras */
+}
+.light .presentacion h2::before{ /* Barrita de escritura */
+    border-right: 2px black solid; 
+}
+.light .redesInicio a{ /* Redes inicio */
+    border: black solid 1px;
+}
+.light .redesInicio i{
+    color: black;
+    font-weight: bold;
+}
+.light .circle-spin{ /* Circulo Avatar */
+    border-top: white solid 3px;
+    border-bottom: white solid 3px;
+}
+.light .cajaCv button{ /* Boton neon */
+    color: black;
+    border: black solid 3px;
+}
+.light .cajaCv button:hover{
+    -webkit-box-shadow: 0px 0px 21px 4px rgba(64,207,255,1);
+    -moz-box-shadow: 0px 0px 21px 4px rgba(64,207,255,1);
+    box-shadow: 0px 0px 21px 4px rgba(64,207,255,1);
+    color: white;
+}
+.light .interes{ /* Caja interes */
+    background: black;
+    color: white;
+}
+.light .nav-link.active{ /* Boton tabs activo */
+    background: black!important;
+    color: white;   
+}
+.light .nav-link{  /* Botones tabs */
+    color: black;
+}
+.light .herramienta i{  /* Iconos skills */
+    color: black;
+}
+.light .instituto{  /* Borde estudios y experiencia */
+    border-bottom: black solid 3px;
+}
+.light .arriba:hover{
+    border: black solid 1px;
+}
+.light .infoContacto{
+    background:black;
+    color: white;
 }
 .toggle .fa-moon{
     color: black;  /* color de la luna cuando esta seleccionada */
@@ -217,6 +274,9 @@ input#toggle{
 }
 
 @media (max-width:992px){ 
+    .container-fluid{
+        --bs-gutter-x: 0px ;
+    }
     .navbar-toggler{
         display:block 
     }
@@ -242,6 +302,16 @@ input#toggle{
     }
     .collapse{
         height: auto;
+    }
+    .logoHeader{
+        order: 0; /* Cambia el orden del botón del menú burger a la izquierda */
+        margin-left: 15px;
+    }
+    .navbar-toggler {
+        order: 2; /* Cambia el orden del botón del menú burger a la izquierda */
+    }
+    .botonNocturno {
+        order: 1; /* Mantiene el orden del botón nocturno en el centro */
     }
 }
 @media (max-width:625px){ 
@@ -413,6 +483,7 @@ input#toggle{
     width: 40%;
     text-align: start;
     margin-right: 50px;
+    font-size: 16.5px;
 }
 .interesesPadre{
     width: 40%;
@@ -442,6 +513,7 @@ input#toggle{
     border-radius: 10px;
     font-size: 17px;
     font-family: "Poppins", sans-serif;
+    cursor: default;
 }
 .interes i{
     font-size: 30px;
@@ -490,8 +562,18 @@ input#toggle{
 .nav-tabs{
     border-bottom: none;
 }
+.nav-tabs .nav-link {
+    border-radius: var(--bs-nav-tabs-border-radius);
+}
+.nav-tabs .nav-link{
+    border: var(--color-primario) solid 2px;
+}
 .nav-link.active{
     border-radius: 10px;
+}
+.nav-tabs .nav-link.active{
+    border-bottom: #dee2e6 solid 1px;
+    font-style: italic;
 }
 .tab-content{
     width: 1300px;
@@ -499,6 +581,7 @@ input#toggle{
 .herramientasPadre{
     display: flex;
     justify-content: space-between;
+    margin-top: 25px;
 }
 .cajaHerramientas{
     display: flex;
@@ -537,7 +620,7 @@ input#toggle{
     color: purple;
 }
 .herramienta:hover .fa-database{
-    color: rgb(47, 255, 234)
+    color: firebrick
 }
 .herramienta:hover .fa-bootstrap{
     color: #563d7c
@@ -548,6 +631,7 @@ input#toggle{
 .hablidadesBlandasPadre{
     display: flex;
     justify-content: space-between;
+    margin-top: 25px;
 }
 .columnaHabilidades{
     width: 550px;
@@ -728,6 +812,9 @@ input#toggle{
     overflow: hidden;
     border-radius: 10px;
     position: relative;
+    -webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.34);
+    -moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.34);
+    box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.34);
 }
 .proyecto img{
     width: 100%;
@@ -802,16 +889,24 @@ input#toggle{
     padding: 13px;
     margin: 10px 0;
     border-radius: 5px;
-    border: none;
+    border: black solid 2px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.formulario input:hover{
+    border: var(--color-primario) solid 2px;
 }
 .formulario textarea{
     padding: 13px;
     margin: 10px 0;
     border-radius: 5px;
-    border: none;
-}
-.formulario textarea{
+    border: black solid 2px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
     resize: none /* no permite agrandar o achicar el text area */
+}
+.formulario textarea:hover{
+    border: var(--color-primario) solid 2px;
 }
 .mapa{
     width: 450px;
@@ -896,6 +991,14 @@ footer .arriba{
         align-items: center;
         margin-top: 30px;
     }
+    .habilidad h2{
+        width:80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .barra-skill{
+        margin: 0 auto;
+    }
 }
 @media (max-width:992px){
     .inicioPadre{
@@ -975,6 +1078,9 @@ footer .arriba{
     }
     .proyecto{
         width: 320px;
+    }
+    .habilidad h2{
+        width:95%;
     }
     .barra-skill{
         width: 95%;
