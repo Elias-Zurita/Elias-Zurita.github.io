@@ -13,6 +13,7 @@ sr.reveal('.presentacion', {
     duration: 3000,
     origin: 'right',
     distance: '-20%', 
+    reset: true
 });
 
 /* AVATAR */
@@ -22,7 +23,8 @@ sr.reveal('.fotoAvatar', {
     rotate: {
         x: 90,
         z: 360
-    }
+    },
+    reset: true
 });
 
 /* SOBRE MI */
@@ -30,14 +32,16 @@ sr.reveal('.cajaSobreMi', {
     duration: 2000,
     origin: 'right',
     distance: '30%', 
-    mobile: false
+    mobile: false,
+    reset: true
 });
 /* SOBRE MI */
 sr.reveal('.cajaSobreMi', { // Mobile
     duration: 2000,
     origin: 'right',
     distance: '10px', 
-    desktop: false
+    desktop: false,
+    reset: true
 });
 
 sr.reveal('.interesesPadre', {
@@ -45,16 +49,19 @@ sr.reveal('.interesesPadre', {
     duration: 2000,
     origin: 'right',
     distance: '-30%', 
-    mobile: false
+    mobile: false,
+    reset: true
 });
 sr.reveal('.interesesPadre', { // Mobile
     delay: 0,
-    desktop: false
+    desktop: false,
+    reset: true
 });
 
 /* SKILLS */
 sr.reveal('#skills', {
     duration: 2500,
+    reset: true
 });
 
 /* EDUCACION */
@@ -62,11 +69,13 @@ sr.reveal('#educacion', {
     duration: 2500,
     origin: 'right',
     distance: '30%', 
-    mobile: false
+    mobile: false,
+    reset: true
 });
 /* EDUCACION */
 sr.reveal('#educacion', { // Mobile
     duration: 2500,
+    reset: true
 });
 
 /* EXPERIENCIA */
@@ -74,12 +83,14 @@ sr.reveal('#experiencia', {
     duration: 2500,
     origin: 'left',
     distance: '30%', 
+    reset: true
 });
 
 /* PORTFOLIO */
 sr.reveal('.sitioWeb', {
     duration: 3000,
     scale: 1.1,
+    reset: true
 });
 
 /* CONTACTO */
@@ -87,6 +98,7 @@ sr.reveal('.formulario', {
     duration: 1500,
     origin: 'right',
     distance: '25px',
+    reset: true
 });
 
 sr.reveal('.mapa', {
@@ -94,4 +106,5 @@ sr.reveal('.mapa', {
     duration: 1500,
     origin: 'right',
     distance: '-30%',
+    reset: true
 });
