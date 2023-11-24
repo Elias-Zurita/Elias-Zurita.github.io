@@ -29,9 +29,6 @@
     <body>
 
         <header class="fixed-top">
-
-            <!-- Boton de whats app para todas las vistas -->
-            <a href="https://wa.me/5491165599444?text=" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i></a>
     
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
@@ -90,6 +87,9 @@
             </script>
         </header>
 
+        <!-- Boton de whats app para todas las vistas -->
+        <a href="https://wa.me/5491165599444?text=" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i></a>
+
         <div id="particles-js"></div>
         
         <section id="inicio">
@@ -116,11 +116,10 @@
             <h1>SOBRE MÍ</h1>
             <div class="padreSobreMi">
                 <div class="cajaSobreMi">
-                    <p> Soy un apasionado desarrollador web full stack con una sólida formación y experiencia en la creación de soluciones web innovadoras. Mi fascinación por la tecnología y mi compromiso con la excelencia me han llevado a explorar y dominar diversas tecnologías para ofrecer experiencias web eficientes y atractivas.</p>
+                    <p> Soy un desarrollador web con una sólida formación y experiencia en la creación de soluciones web innovadoras. Mi fascinación por la tecnología me ha llevado a explorar y dominar diversas tecnologías para ofrecer experiencias web eficientes y atractivas.</p>
                     <p>Disfruto enfrentando desafíos y resolviendo problemas. Mi enfoque se centra en el desarrollo de aplicaciones web que no solo sean funcionales, sino también intuitivas y agradables para el usuario. La creatividad y la atención al detalle son fundamentales en mi proceso de trabajo.</p>
-                    <p>Como full stack developer web, tengo experiencia tanto en el desarrollo del lado del cliente como en el del servidor.</p>
-                    <p>El mundo del desarrollo web evoluciona constantemente, y me esfuerzo por mantenerme actualizado con las últimas tendencias y tecnologías. Mi enfoque en el aprendizaje continuo me permite adaptarme rápidamente y ofrecer soluciones que estén a la vanguardia de la industria.</p>
-                    <p>Si buscas un desarrollador comprometido, creativo y orientado a resultados, no dudes en contactarme. ¡Me encantaría escuchar más sobre tu proyecto y cómo puedo ayudar!</p>
+                    <p>Como full stack developer web, tengo experiencia tanto en el desarrollo del lado del cliente como del servidor.</p>
+                    <p>Si buscas un desarrollador comprometido, creativo y orientado a resultados, no dudes en contactarme.</p>
                     <p>¡Gracias por visitar mi Portfolio!</p>
                 </div>
                 <div class="interesesPadre">
@@ -500,121 +499,12 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="js/sweetalert2.js"></script>
         <script src="js/darkmode.js"></script>
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="js/scrollrevealConfig.js"></script>
+
         <!-- Fondo de particulas -->
         <script src="js/particles.min.js"></script>
-        <script>particlesJS(
-            {
-            "particles": {
-                "number": {
-                "value": 50,
-                "density": {
-                    "enable": true,
-                    "value_area": 800
-                }
-                },
-                "color": {
-                "value": "#352adc"
-                },
-                "shape": {
-                "type": "circle",
-                "stroke": {
-                    "width": 0,
-                    "color": "#000000"
-                },
-                "polygon": {
-                    "nb_sides": 5
-                },
-                "image": {
-                    "src": "img/github.svg",
-                    "width": 100,
-                    "height": 100
-                }
-                },
-                "opacity": {
-                "value": 0.5,
-                "random": false,
-                "anim": {
-                    "enable": false,
-                    "speed": 1,
-                    "opacity_min": 0.1,
-                    "sync": false
-                }
-                },
-                "size": {
-                "value": 3,
-                "random": true,
-                "anim": {
-                    "enable": false,
-                    "speed": 40,
-                    "size_min": 0.1,
-                    "sync": false
-                }
-                },
-                "line_linked": {
-                "enable": true,
-                "distance": 150,
-                "color": "#acacac",
-                "opacity": 0.6,
-                "width": 1
-                },
-                "move": {
-                "enable": true,
-                "speed": 6,
-                "direction": "none",
-                "random": false,
-                "straight": false,
-                "out_mode": "out",
-                "bounce": false,
-                "attract": {
-                    "enable": false,
-                    "rotateX": 600,
-                    "rotateY": 1200
-                }
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                "onhover": {
-                    "enable": true,
-                    "mode": "repulse"
-                },
-                "onclick": {
-                    "enable": true,
-                    "mode": "push"
-                },
-                "resize": true
-                },
-                "modes": {
-                "grab": {
-                    "distance": 400,
-                    "line_linked": {
-                    "opacity": 1
-                    }
-                },
-                "bubble": {
-                    "distance": 400,
-                    "size": 40,
-                    "duration": 2,
-                    "opacity": 8,
-                    "speed": 3
-                },
-                "repulse": {
-                    "distance": 200,
-                    "duration": 0.4
-                },
-                "push": {
-                    "particles_nb": 4
-                },
-                "remove": {
-                    "particles_nb": 2
-                }
-                }
-            },
-            "retina_detect": true
-            }
-        )</script>
-    
+        <script src="js/particlesConfig.js"></script>   
     </body>
 
 </html>
