@@ -303,15 +303,9 @@ input#toggle{
     .collapse{
         height: auto;
     }
-    .logoHeader{
-        order: 0; /* Cambia el orden del botón del menú burger a la izquierda */
-        margin-left: 15px;
-    }
-    .navbar-toggler {
-        order: 2; /* Cambia el orden del botón del menú burger a la izquierda */
-    }
-    .botonNocturno {
-        order: 1; /* Mantiene el orden del botón nocturno en el centro */
+    .botonNocturno{
+        margin-left: auto;
+        margin-right: auto
     }
 }
 @media (max-width:625px){ 
@@ -354,6 +348,7 @@ input#toggle{
 .inicioPadre{
     display: flex;
     width: 1300px;
+    user-select: none;
 }
 .presentacion{
     display:flex;

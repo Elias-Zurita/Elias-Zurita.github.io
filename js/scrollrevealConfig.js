@@ -1,22 +1,32 @@
 window.sr = ScrollReveal();
 
-/* HEADER */
+// HEADER
 sr.reveal('header', {
     duration: 3000,
     reset: true,
     origin: 'top',
     distance: '100px',
+    mobile: false
 });
 
-/* PRESENTACION */
+// PRESENTACION 
 sr.reveal('.presentacion', {
     duration: 3000,
     origin: 'right',
     distance: '-20%', 
-    reset: true
+    reset: true,
+    mobile: false
+});
+sr.reveal('.presentacion', { // mobile
+    duration: 3000,
+    origin: 'right',
+    distance: '-20%', 
+    reset: false,
+    mobile: true,
+    desktop: false,
 });
 
-/* AVATAR */
+// AVATAR
 sr.reveal('.fotoAvatar', {
     opacity: null,
     duration: 3000,
@@ -24,10 +34,22 @@ sr.reveal('.fotoAvatar', {
         x: 90,
         z: 360
     },
-    reset: true
+    reset: true,
+    mobile: false
+});
+sr.reveal('.fotoAvatar', { // mobile
+    opacity: null,
+    duration: 3000,
+    rotate: {
+        x: 90,
+        z: 360
+    },
+    reset: false,
+    mobile: true,
+    desktop: false
 });
 
-/* SOBRE MI */
+// SOBRE MI 
 sr.reveal('.cajaSobreMi', {
     duration: 2000,
     origin: 'right',
@@ -35,15 +57,17 @@ sr.reveal('.cajaSobreMi', {
     mobile: false,
     reset: true
 });
-/* SOBRE MI */
-sr.reveal('.cajaSobreMi', { // Mobile
+sr.reveal('.cajaSobreMi', { // mobile
     duration: 2000,
     origin: 'right',
     distance: '10px', 
     desktop: false,
-    reset: true
+    reset: false,
+    mobile: true,
+    desktop: false,
 });
 
+// INTERESES
 sr.reveal('.interesesPadre', {
     delay: 1000,
     duration: 2000,
@@ -52,19 +76,28 @@ sr.reveal('.interesesPadre', {
     mobile: false,
     reset: true
 });
-sr.reveal('.interesesPadre', { // Mobile
+sr.reveal('.interesesPadre', { // mobile
     delay: 0,
     desktop: false,
-    reset: true
+    reset: false,
+    mobile: true,
+    desktop: false,
 });
 
-/* SKILLS */
+// SKILLS 
 sr.reveal('#skills', {
     duration: 2500,
-    reset: true
+    reset: true,
+    mobile: false
+});
+sr.reveal('#skills', { // mobile
+    duration: 2500,
+    reset: false,
+    mobile: true,
+    desktop: false,
 });
 
-/* EDUCACION */
+// EDUCACION
 sr.reveal('#educacion', {
     duration: 2500,
     origin: 'right',
@@ -72,39 +105,77 @@ sr.reveal('#educacion', {
     mobile: false,
     reset: true
 });
-/* EDUCACION */
-sr.reveal('#educacion', { // Mobile
+sr.reveal('#educacion', { // mobile
     duration: 2500,
-    reset: true
+    reset: false,
+    mobile: true,
+    desktop: false,
 });
 
-/* EXPERIENCIA */
+// EXPERIENCIA
 sr.reveal('#experiencia', {
     duration: 2500,
     origin: 'left',
     distance: '30%', 
-    reset: true
+    reset: true,
+    mobile: false
+});
+sr.reveal('#experiencia', { // mobile
+    duration: 2500,
+    origin: 'left',
+    distance: '30%', 
+    reset: false,
+    mobile: true,
+    desktop: false,
 });
 
-/* PORTFOLIO */
+// PORTFOLIO
 sr.reveal('.sitioWeb', {
     duration: 3000,
     scale: 1.1,
-    reset: true
+    reset: true,
+    mobile: false
+});
+sr.reveal('.sitioWeb', { // mobile
+    duration: 3000,
+    scale: 1.1,
+    reset: false,
+    mobile: true,
+    desktop: false,
 });
 
-/* CONTACTO */
+// CONTACTO 
 sr.reveal('.formulario', {
     duration: 1500,
     origin: 'right',
     distance: '25px',
-    reset: true
+    reset: true,
+    mobile: false
+});
+sr.reveal('.formulario', { // mobile
+    duration: 1500,
+    origin: 'right',
+    distance: '25px',
+    reset: false,
+    mobile: true,
+    desktop: false,
 });
 
+// MAPA
 sr.reveal('.mapa', {
     delay: 800,
     duration: 1500,
     origin: 'right',
     distance: '-30%',
-    reset: true
+    reset: true,
+    mobile: false
+});
+sr.reveal('.mapa', { // mobile
+    delay: 800,
+    duration: 1500,
+    origin: 'right',
+    distance: '-30%',
+    reset: false,
+    mobile: true,
+    desktop: false,
 });
