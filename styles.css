@@ -843,6 +843,13 @@ input#toggle{
 .proyecto .overlay:hover h3{
     margin-bottom: 0px;
 }
+.cajaNegra{
+    border: #252A2E solid 4px;
+    border-radius:10px
+}
+.cajaNegra:hover{
+    border: none;
+}
 .botonRepo button{
     margin-top: 1%;
     margin-bottom: 2%;
