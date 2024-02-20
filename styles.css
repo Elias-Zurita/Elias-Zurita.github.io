@@ -370,7 +370,7 @@ input#toggle{
     text-transform: uppercase;
     font-style: italic;
     position: relative;
-    width: 300px;
+    width: 425px;
     color: transparent;
     background-image: linear-gradient(white, white);  /* Color con el que va a rellenar las letras */
     background-repeat: no-repeat;  /* Borra el relleno cuando vuelve hacia atras */
@@ -391,7 +391,7 @@ input#toggle{
 }
 @keyframes rellenadoTexto{
     0%,10%,100%{
-        background-position: -300px 0;  /* Desde donde arranca el efecto de relleno */
+        background-position: -425px 0;  /* Desde donde arranca el efecto de relleno */
     }
     65%, 85%{  /* Demora el reinicio de autoescritura */
         background-position: 0 0;
@@ -1067,6 +1067,18 @@ footer .arriba{
         position: relative;
         width: 250px;
         height: 250px;
+    }
+    .presentacion h2{
+        font-size: 15px;
+        width: 320px;
+    }
+    @keyframes rellenadoTexto{
+        0%,10%,100%{
+            background-position: -320px 0;  /* Desde donde arranca el efecto de relleno */
+        }
+        65%, 85%{  /* Demora el reinicio de autoescritura */
+            background-position: 0 0;
+        }
     }
 }
 @media(max-width:480px){
