@@ -3,7 +3,7 @@ window.sr = ScrollReveal();
 // HEADER
 sr.reveal('header', {
     duration: 3000,
-    reset: true,
+    reset: false,
     origin: 'top',
     distance: '100px',
     mobile: false
@@ -14,7 +14,7 @@ sr.reveal('.presentacion', {
     duration: 3000,
     origin: 'right',
     distance: '-20%', 
-    reset: true,
+    reset: false,
     mobile: false
 });
 sr.reveal('.presentacion', { // mobile
@@ -22,7 +22,7 @@ sr.reveal('.presentacion', { // mobile
     origin: 'right',
     distance: '-20%', 
     reset: false,
-    mobile: true,
+    mobile: false,
     desktop: false,
 });
 
@@ -34,7 +34,7 @@ sr.reveal('.fotoAvatar', {
         x: 90,
         z: 360
     },
-    reset: true,
+    reset: false,
     mobile: false
 });
 sr.reveal('.fotoAvatar', { // mobile
@@ -55,7 +55,7 @@ sr.reveal('.cajaSobreMi', {
     origin: 'right',
     distance: '30%', 
     mobile: false,
-    reset: true
+    reset: false
 });
 sr.reveal('.cajaSobreMi', { // mobile
     duration: 2000,
@@ -74,7 +74,7 @@ sr.reveal('.interesesPadre', {
     origin: 'right',
     distance: '-30%', 
     mobile: false,
-    reset: true
+    reset: false
 });
 sr.reveal('.interesesPadre', { // mobile
     delay: 0,
@@ -87,7 +87,7 @@ sr.reveal('.interesesPadre', { // mobile
 // SKILLS 
 sr.reveal('#skills', {
     duration: 2500,
-    reset: true,
+    reset: false,
     mobile: false
 });
 sr.reveal('#skills', { // mobile
@@ -103,7 +103,7 @@ sr.reveal('#educacion', {
     origin: 'right',
     distance: '30%', 
     mobile: false,
-    reset: true
+    reset: false
 });
 sr.reveal('#educacion', { // mobile
     duration: 2500,
@@ -117,7 +117,7 @@ sr.reveal('#experiencia', {
     duration: 2500,
     origin: 'left',
     distance: '30%', 
-    reset: true,
+    reset: false,
     mobile: false
 });
 sr.reveal('#experiencia', { // mobile
@@ -133,7 +133,7 @@ sr.reveal('#experiencia', { // mobile
 sr.reveal('.sitioWeb', {
     duration: 3000,
     scale: 1.1,
-    reset: true,
+    reset: false,
     mobile: false
 });
 sr.reveal('.sitioWeb', { // mobile
@@ -149,7 +149,7 @@ sr.reveal('.formulario', {
     duration: 1500,
     origin: 'right',
     distance: '25px',
-    reset: true,
+    reset: false,
     mobile: false
 });
 sr.reveal('.formulario', { // mobile
@@ -167,7 +167,7 @@ sr.reveal('.mapa', {
     duration: 1500,
     origin: 'right',
     distance: '-30%',
-    reset: true,
+    reset: false,
     mobile: false
 });
 sr.reveal('.mapa', { // mobile

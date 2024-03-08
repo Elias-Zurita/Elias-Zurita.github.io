@@ -862,6 +862,7 @@ input#toggle{
     border: white 2px solid;
     color: white;
     background-color: #252A2E;
+    transition: .3s ease-in-out;
 }
 .botonRepo{
     text-align: center;
@@ -869,7 +870,6 @@ input#toggle{
 }
 .botonRepo button:hover {
     background-color: var(--color-primario);
-    transition: .3s ease-in-out;
     cursor: pointer;
     border-radius: 15px;
 }
