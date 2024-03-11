@@ -9,6 +9,7 @@ document.getElementById('miFormulario').addEventListener('submit', function(even
           text: '¡Gracias por contactarme! Te responderé lo antes posible.',
           imageAlt: 'Custom image',
           footer: '<img src="img/icono.png" alt="logo" style="width:200">',
+          timer: 6000,
       })
   }
 });
