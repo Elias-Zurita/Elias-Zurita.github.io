@@ -638,7 +638,7 @@ input#toggle{
     width: 60px;
     filter: grayscale(100%)
 }
-.herramienta img:hover{
+.herramienta:hover img{
     filter: grayscale(0%)
 }
 .express{
@@ -648,6 +648,7 @@ input#toggle{
     height: 60px;
     background: white;
     color: gray;
+    margin: 0 28px;
 }
 .express:hover{
     background: gray;
