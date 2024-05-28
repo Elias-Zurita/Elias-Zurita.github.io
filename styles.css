@@ -585,7 +585,7 @@ input#toggle{
 .cajaHerramientas{
     display: flex;
     flex-wrap: wrap;
-    width: 550px;
+    width: 605px;
     align-items: center;
     justify-content: center;
 }
