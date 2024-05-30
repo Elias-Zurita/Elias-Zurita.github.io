@@ -12,6 +12,9 @@ toggle.addEventListener("change", () => {
 
 toggle.addEventListener('change', function() {
     // Colores nuevos en el modo claro
-    document.documentElement.style.setProperty('--color-primario', this.checked ? '#40cfff' : '#dc143c');
+    document.documentElement.style.setProperty(
+      "--color-primario",
+      this.checked ? "#dc143c" : "#40cfff"
+    );
   }
 );
