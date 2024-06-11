@@ -473,16 +473,17 @@ input#toggle{
     padding: 70px 0px 30px 0px;
 }
 .padreSobreMi{
-    margin-top: 30px;
     display: flex;
     justify-content:center;
     align-items: center;
+    max-width: 1800px;
+    margin: 30px auto;
 }
 .cajaSobreMi{
     width: 40%;
     text-align: start;
     margin-right: 50px;
-    font-size: 16.5px;
+    font-size: 18px;
 }
 .interesesPadre{
     width: 40%;
@@ -552,11 +553,12 @@ input#toggle{
     padding: 70px 0px 30px 0px;
 }
 .padreSkills{
-    margin-top: 30px;
     display: flex;
     justify-content:center;
     align-items: center;
     flex-direction: column;
+    margin: 30px auto;
+    max-width: 1800px;
 }
 .nav-tabs{
     border-bottom: none;
@@ -792,6 +794,7 @@ input#toggle{
     flex-direction: column;
     width: 992px;
     margin: 20px auto;
+    max-width: 1800px;
 }
 .instituto{
     display: flex;
@@ -834,6 +837,7 @@ input#toggle{
     width: 80%;
     margin: 0 auto;
     justify-content:center;
+    max-width: 1800px;
 }
 .sitioWeb{
     display: flex;
