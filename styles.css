@@ -615,6 +615,12 @@ input#toggle{
 .herramienta:hover .fa-js{
     color: #F0DB4F;
 }
+.herramienta:hover .fa-java{
+    background: linear-gradient(to bottom, #EA2D2E 53%, #5382A1 40%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
 .herramienta:hover .fa-react{
     color: #61dbfb;
 }
@@ -984,6 +990,9 @@ input#toggle{
     font-weight: bold;
     text-align: start;
     padding: 20px;
+}
+.infoContacto a:hover{
+    color: var(--color-primario);
 }
 
 /*================== FOOTER ==================*/
